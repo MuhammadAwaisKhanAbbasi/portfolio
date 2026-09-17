@@ -1,0 +1,888 @@
+ ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muhammad Awais Khan Abbasi | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(8, 11, 18, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00e5ff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: auto;
+            padding: 130px 25px 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .small-text {
+            color: #00e5ff;
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            color: #b8b8b8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #aaa;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #00e5ff;
+            color: #061016;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(0,229,255,0.5);
+        }
+
+        .btn-outline {
+            border: 1px solid #00e5ff;
+            color: #00e5ff;
+        }
+
+        .btn-outline:hover {
+            background: #00e5ff;
+            color: #061016;
+        }
+
+        /* ================= PROFILE IMAGE ================= */
+
+        .hero-image {
+            flex: 0 0 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box {
+            width: 360px;
+            height: 430px;
+            border-radius: 30px;
+            padding: 5px;
+            background: linear-gradient(145deg, #00e5ff, #0066ff, #8a2be2);
+            box-shadow: 0 0 45px rgba(0,229,255,0.22);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 26px;
+            display: block;
+            background: #111;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        .section-title p {
+            color: #999;
+        }
+
+        /* ================= SERVICES ================= */
+
+        #services {
+            background: #0c1018;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #111722;
+            padding: 35px 25px;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+            box-shadow: 0 10px 30px rgba(0,229,255,0.12);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .service-card p {
+            color: #999;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: #111722;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row strong {
+            color: #00e5ff;
+        }
+
+        .info-row span {
+            color: #ccc;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        #projects {
+            background: #0c1018;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111722;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.07);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+        }
+
+        .project-image {
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+            background: linear-gradient(135deg, #101827, #16283b);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #999;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            color: #00e5ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            background: #111722;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #080b12;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .contact-box input:focus,
+        .contact-box textarea:focus {
+            border-color: #00e5ff;
+        }
+
+        .contact-box textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-box button {
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #05070b;
+            color: #777;
+        }
+
+        footer span {
+            color: #00e5ff;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 130px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                flex: none;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .image-box {
+                width: 290px;
+                height: 350px;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                M<span>AK</span>
+            </div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="small-text">
+                👋 Welcome to my portfolio
+            </div>
+
+            <h1>
+                Muhammad Awais<br>
+                <span>Khan Abbasi</span>
+            </h1>
+
+            <h2>
+                Web Developer & Software Engineer
+            </h2>
+
+            <p>
+                I create modern, responsive and professional websites
+                and software solutions. I focus on clean design,
+                powerful functionality and great user experience.
+            </p>
+
+            <div class="buttons">
+                <a href="#services" class="btn btn-primary">
+                    View Services
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE PIC RIGHT SIDE -->
+
+        <div class="hero-image">
+
+            <div class="image-box">
+
+                <!-- 
+                IMPORTANT:
+                Apni picture ka naam "profile.jpg" rakho
+                aur index.html ke same folder mein rakho.
+                -->
+
+                <img src="profile.jpg" alt="Muhammad Awais Khan Abbasi">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services">
+
+        <div class="section-container">
+
+            <div class="section-title">
+                <h2>My <span>Services</span></h2>
+                <p>Professional digital solutions for your needs.</p>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Modern, responsive and professional websites
+                        for businesses, portfolios and personal brands.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Software Development</h3>
+                    <p>
+                        Custom software solutions designed according
+                        to your requirements and workflow.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Assistant</h3>
+                    <p>
+                        Intelligent AI assistant solutions with voice,
+                        automation and smart commands.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI / UX Design</h3>
+                    <p>
+                        Clean and attractive interfaces focused on
+                        usability and modern visual design.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Websites that look great on desktops,
+                        laptops, tablets and mobile phones.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Website Maintenance</h3>
+                    <p>
+                        Updates, improvements, bug fixes and ongoing
+                        support for existing websites.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="section-container">
+
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+                <p>Get to know me and my work.</p>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <h3>Building Digital Experiences</h3>
+
+                    <p>
+                        I'm Muhammad Awais Khan Abbasi, a software
+                        engineering professional interested in web
+                        development, software development and AI.
+                    </p>
+
+                    <p>
+                        My goal is to build useful, modern and easy-to-use
+                        digital products that solve real-world problems.
+                    </p>
+
+                    <p>
+                        I enjoy learning new technologies and turning
+                        ideas into working projects.
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-row">
+                        <strong>Name</strong>
+                        <span>Muhammad Awais Khan Abbasi</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Field</strong>
+                        <span>Software Engineering</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Specialization</strong>
+                        <span>Web & Software Development</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Interest</strong>
+                        <span>Artificial Intelligence</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Work</strong>
+                        <span>Freelance / Projects</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="section-container">
+
+            <div class="section-title">
+                <h2>My <span>Projects</span></h2>
+                <p>Some of my latest work.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        🛍️
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Abbasi Collection</h3>
+
+                        <p>
+                            Modern e-commerce concept for clothing,
+                            perfumes, shoes and accessories.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        🤖
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Muskan AI Assistant</h3>
+
+                        <p>
+                            Personal AI assistant with voice interaction,
+                            commands and automation features.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        💼
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Portfolio Website</h3>
+
+                        <p>
+                            Professional personal portfolio website
+                            showcasing services, projects and skills.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="section-container">
+
+            <div class="section-title">
+                <h2>Contact <span>Me</span></h2>
+                <p>Let's work together.</p>
+            </div>
+
+            <div class="contact-box">
+
+                <form onsubmit="sendMessage(event)">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <span>Muhammad Awais Khan Abbasi</span>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            alert(
+                "Thank you " +
+                name +
+                "! Your message has been received."
+            );
+
+            document.querySelector("form").reset();
+        }
+
+    </script>
+
+</body>
+</html>
+```
