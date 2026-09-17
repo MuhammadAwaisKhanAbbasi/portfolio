@@ -2,805 +2,1510 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Muhammad Awais Khan Abbasi | Developer</title>
-
-<style>
-
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#050816;
-    color:#ffffff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:70px;
-
-    background:rgba(5,8,22,0.88);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,255,255,0.08);
-
-    z-index:9999;
-}
-
-.nav-container{
-    width:90%;
-    max-width:1150px;
-    height:70px;
-    margin:auto;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:21px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-.logo span{
-    color:#00e5ff;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    color:#cccccc;
-    font-size:14px;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#00e5ff;
-}
-
-.menu-btn{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-
-/* =========================
-   COMMON
-========================= */
-
-.container{
-    width:90%;
-    max-width:1150px;
-    margin:auto;
-}
-
-section{
-    padding:100px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.section-title small{
-    color:#00e5ff;
-    letter-spacing:3px;
-    font-weight:bold;
-}
-
-.section-title h2{
-    font-size:40px;
-    margin-top:8px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:100vh;
-    padding-top:70px;
-
-    display:flex;
-    align-items:center;
-
-    background:
-    radial-gradient(circle at 80% 30%,rgba(0,229,255,0.10),transparent 35%),
-    radial-gradient(circle at 20% 70%,rgba(0,229,255,0.06),transparent 30%);
-}
-
-.hero-content{
-    display:grid;
-    grid-template-columns:1.2fr 0.8fr;
-    gap:50px;
-    align-items:center;
-}
-
-.hero-text small{
-    color:#00e5ff;
-    font-size:14px;
-    font-weight:bold;
-    letter-spacing:4px;
-}
-
-.hero-text h1{
-    font-size:65px;
-    line-height:1.05;
-    margin:15px 0;
-}
-
-.hero-text h1 span{
-    color:#00e5ff;
-}
-
-.hero-text h2{
-    color:#aaa;
-    font-size:22px;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    color:#999;
-    max-width:650px;
-    margin-bottom:30px;
-}
-
-.buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 22px;
-    border-radius:8px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:#00e5ff;
-    color:#001018;
-}
-
-.btn-secondary{
-    border:1px solid #00e5ff;
-    color:#00e5ff;
-}
+    <title>Muhammad Awais Khan Abbasi | Portfolio</title>
 
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,229,255,0.15);
-}
+    <meta name="description"
+        content="Muhammad Awais Khan Abbasi - Software Engineering Student, Web Developer and Computer Operator.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #050816;
+            --bg2: #090d20;
+
+            --card: rgba(255,255,255,.055);
+            --card2: rgba(255,255,255,.035);
+
+            --border: rgba(255,255,255,.11);
+
+            --white: #ffffff;
+            --text: #e9ecf7;
+            --muted: #969eb5;
+
+            --purple: #7c5cff;
+            --blue: #00e5ff;
+            --pink: #ff3cac;
+            --green: #00ff9d;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+
+            background:
+                radial-gradient(circle at 15% 10%, rgba(124,92,255,.15), transparent 30%),
+                radial-gradient(circle at 85% 20%, rgba(0,229,255,.10), transparent 28%),
+                radial-gradient(circle at 50% 90%, rgba(255,60,172,.08), transparent 30%),
+                #050816;
+
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .grid {
+            position: fixed;
+            inset: 0;
+            z-index: -5;
+
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+            background-size: 70px 70px;
+
+            mask-image: linear-gradient(to bottom, black, transparent 85%);
+
+            pointer-events: none;
+        }
+
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -4;
+            pointer-events: none;
+        }
+
+        .orb1 {
+            width: 450px;
+            height: 450px;
+            background: #5b3fd0;
+            opacity: .12;
+            top: -250px;
+            left: -220px;
+        }
 
+        .orb2 {
+            width: 400px;
+            height: 400px;
+            background: #00bcd4;
+            opacity: .08;
+            right: -220px;
+            top: 25%;
+        }
 
-/* =========================
-   PROFILE
-========================= */
+        .orb3 {
+            width: 350px;
+            height: 350px;
+            background: #d72d93;
+            opacity: .08;
+            left: 20%;
+            bottom: -250px;
+        }
 
-.profile-box{
-    display:flex;
-    justify-content:center;
-}
 
-.profile{
-    width:320px;
-    height:320px;
+        /* =========================
+           NAVBAR
+        ========================= */
 
-    object-fit:cover;
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
 
-    border-radius:50%;
+            width: 100%;
+            height: 76px;
 
-    border:5px solid #00e5ff;
+            display: flex;
+            align-items: center;
 
-    box-shadow:
-    0 0 30px rgba(0,229,255,0.25),
-    0 0 80px rgba(0,229,255,0.08);
+            background: rgba(5,8,22,.65);
 
-    animation:float 4s ease-in-out infinite;
-}
+            border-bottom: 1px solid rgba(255,255,255,.08);
 
-@keyframes float{
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
 
-    0%,100%{
-        transform:translateY(0);
-    }
+            z-index: 1000;
+        }
 
-    50%{
-        transform:translateY(-12px);
-    }
+        .nav-inner {
+            width: min(1150px, 92%);
+            margin: auto;
 
-}
-
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* =========================
-   ABOUT
-========================= */
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
+        .logo span {
+            color: var(--purple);
+        }
 
-.card{
-    padding:30px;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
 
-    background:rgba(255,255,255,0.04);
+            list-style: none;
+        }
 
-    border:1px solid rgba(255,255,255,0.08);
+        .nav-links a {
+            color: #a4abc0;
+            font-size: 13px;
+            font-weight: 600;
 
-    border-radius:15px;
+            transition: .25s;
+        }
 
-    transition:0.3s;
-}
+        .nav-links a:hover {
+            color: white;
+        }
 
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#00e5ff;
-}
+        .nav-btn {
+            padding: 10px 17px;
 
-.card h3{
-    color:#00e5ff;
-    margin-bottom:15px;
-}
+            border: 1px solid rgba(124,92,255,.35);
 
-.card p{
-    color:#aaa;
-}
+            border-radius: 10px;
 
+            background: rgba(124,92,255,.10);
 
-/* =========================
-   SERVICES
-========================= */
+            color: white !important;
+        }
 
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
+        .menu-btn {
+            display: none;
 
-.service{
-    padding:30px;
+            width: 42px;
+            height: 42px;
 
-    background:rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
 
-    border:1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,.05);
 
-    border-radius:15px;
+            color: white;
 
-    transition:0.3s;
-}
+            border-radius: 10px;
 
-.service:hover{
-    transform:translateY(-7px);
-    border-color:#00e5ff;
-}
+            font-size: 20px;
 
-.service-icon{
-    font-size:42px;
-    margin-bottom:15px;
-}
+            cursor: pointer;
+        }
 
-.service h3{
-    margin-bottom:10px;
-}
 
-.service p{
-    color:#aaa;
-    font-size:14px;
-}
+        /* =========================
+           HERO
+        ========================= */
 
+        .hero {
+            min-height: 100vh;
 
-/* =========================
-   SKILLS
-========================= */
+            padding-top: 145px;
+            padding-bottom: 90px;
 
-.skills-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
+            display: flex;
+            align-items: center;
+        }
 
-.skill{
-    margin-bottom:22px;
-}
+        .hero-grid {
+            display: grid;
 
-.skill-info{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:7px;
-}
+            grid-template-columns: 1.1fr .9fr;
 
-.skill-info span:first-child{
-    font-weight:bold;
-}
+            gap: 65px;
 
-.skill-info span:last-child{
-    color:#00e5ff;
-}
+            align-items: center;
+        }
 
-.progress{
-    height:9px;
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
 
-    background:#151a2e;
+            padding: 8px 14px;
 
-    border-radius:20px;
+            border-radius: 50px;
 
-    overflow:hidden;
-}
+            border: 1px solid rgba(0,255,157,.22);
 
-.progress-bar{
-    height:100%;
+            background: rgba(0,255,157,.055);
 
-    background:#00e5ff;
+            color: #a9cdbd;
 
-    border-radius:20px;
-}
+            font-size: 12px;
+            font-weight: 600;
 
+            margin-bottom: 25px;
+        }
 
-/* =========================
-   EXPERIENCE
-========================= */
+        .dot {
+            width: 8px;
+            height: 8px;
 
-.timeline{
-    max-width:850px;
-    margin:auto;
-}
+            border-radius: 50%;
 
-.timeline-item{
-    padding:25px 30px;
+            background: var(--green);
 
-    margin-bottom:22px;
+            box-shadow: 0 0 15px rgba(0,255,157,.7);
+        }
 
-    background:rgba(255,255,255,0.04);
+        .hero h1 {
+            font-size: clamp(52px, 7vw, 84px);
 
-    border-left:3px solid #00e5ff;
+            line-height: .96;
 
-    border-radius:0 12px 12px 0;
+            letter-spacing: -5px;
 
-    transition:0.3s;
-}
+            font-weight: 900;
 
-.timeline-item:hover{
-    transform:translateX(5px);
-}
+            color: white;
+        }
 
-.timeline-item h3{
-    color:#00e5ff;
-}
+        .gradient {
+            background:
+                linear-gradient(
+                    100deg,
+                    #9b7cff,
+                    #00e5ff,
+                    #ff3cac
+                );
 
-.timeline-item h4{
-    margin:5px 0;
-}
+            -webkit-background-clip: text;
+            background-clip: text;
 
-.timeline-item span{
-    color:#777;
-    font-size:14px;
-}
+            color: transparent;
 
-.timeline-item p{
-    color:#aaa;
-    margin-top:10px;
-}
+            background-size: 200% auto;
 
+            animation: gradientMove 5s linear infinite;
+        }
 
-/* =========================
-   EDUCATION
-========================= */
+        @keyframes gradientMove {
 
-.education-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
+            0% {
+                background-position: 0% center;
+            }
 
-.education-card{
-    padding:30px;
+            100% {
+                background-position: 200% center;
+            }
 
-    background:rgba(255,255,255,0.04);
+        }
 
-    border:1px solid rgba(255,255,255,0.08);
+        .typing {
+            min-height: 34px;
 
-    border-radius:15px;
+            margin-top: 25px;
 
-    transition:0.3s;
-}
+            color: #c0c6d8;
 
-.education-card:hover{
-    border-color:#00e5ff;
-    transform:translateY(-5px);
-}
+            font-size: 19px;
 
-.education-card h3{
-    color:#00e5ff;
-    margin-bottom:12px;
-}
+            font-weight: 600;
+        }
 
-.education-card p{
-    color:#aaa;
-}
+        .cursor {
+            color: var(--blue);
+        }
 
+        .hero-description {
+            max-width: 650px;
 
-/* =========================
-   PROJECTS
-========================= */
+            margin-top: 20px;
 
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
+            color: #969eb5;
 
-.project{
-    padding:30px;
+            font-size: 14px;
 
-    background:rgba(255,255,255,0.04);
+            line-height: 1.9;
+        }
 
-    border:1px solid rgba(255,255,255,0.08);
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
 
-    border-radius:15px;
+            gap: 12px;
 
-    transition:0.3s;
-}
+            margin-top: 32px;
+        }
 
-.project:hover{
-    transform:translateY(-7px);
-    border-color:#00e5ff;
-}
+        .btn {
+            display: inline-flex;
 
-.project h3{
-    color:#00e5ff;
-    margin-bottom:12px;
-}
+            align-items: center;
+            justify-content: center;
 
-.project p{
-    color:#aaa;
-    font-size:14px;
-    margin-bottom:20px;
-}
+            gap: 8px;
 
-.project-btn{
-    display:inline-block;
+            padding: 13px 20px;
 
-    padding:9px 15px;
+            border-radius: 11px;
 
-    border:1px solid #00e5ff;
+            font-size: 13px;
 
-    border-radius:7px;
+            font-weight: 700;
 
-    color:#00e5ff;
+            border: 1px solid rgba(255,255,255,.1);
 
-    font-size:13px;
-}
+            transition: .25s;
+        }
 
-.coming{
-    color:#ffc107;
-    font-size:12px;
-    font-weight:bold;
-}
+        .btn-primary {
+            color: white;
 
+            background:
+                linear-gradient(
+                    135deg,
+                    #7255ee,
+                    #5942c8
+                );
 
-/* =========================
-   CONTACT
-========================= */
+            border-color: #8067f5;
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
+            box-shadow:
+                0 10px 35px rgba(124,92,255,.30);
+        }
 
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
+        .btn-primary:hover {
+            transform: translateY(-3px);
 
-.contact-item{
-    padding:20px;
+            box-shadow:
+                0 15px 45px rgba(124,92,255,.45);
+        }
 
-    background:rgba(255,255,255,0.04);
+        .btn-dark {
+            color: #dce1ef;
 
-    border:1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,.045);
 
-    border-radius:12px;
+            border-color: rgba(255,255,255,.10);
+        }
 
-    transition:0.3s;
-}
+        .btn-dark:hover {
+            transform: translateY(-3px);
 
-.contact-item:hover{
-    border-color:#00e5ff;
-}
+            background: rgba(255,255,255,.08);
+        }
 
-.contact-item strong{
-    color:#00e5ff;
-}
 
-.contact-item p{
-    color:#aaa;
-    margin-top:5px;
-}
+        /* =========================
+           PROFILE
+        ========================= */
 
-form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
+        .hero-visual {
+            display: flex;
+            justify-content: center;
 
-input,
-textarea{
+            position: relative;
+        }
 
-    width:100%;
+        .profile-wrap {
+            position: relative;
 
-    padding:14px;
+            width: min(390px, 82vw);
 
-    background:#0b1022;
+            aspect-ratio: 1;
 
-    border:1px solid rgba(255,255,255,0.1);
+            padding: 12px;
 
-    color:white;
+            border-radius: 35px;
 
-    border-radius:8px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.12),
+                    rgba(255,255,255,.025)
+                );
 
-    outline:none;
+            border: 1px solid rgba(255,255,255,.15);
 
-    font-family:inherit;
-}
+            box-shadow:
+                0 30px 100px rgba(0,0,0,.55),
+                0 0 80px rgba(124,92,255,.14);
+        }
 
-input:focus,
-textarea:focus{
-    border-color:#00e5ff;
-}
+        .profile-wrap::after {
+            content: "";
 
-textarea{
-    height:150px;
-    resize:none;
-}
+            position: absolute;
 
-button{
-    border:none;
-    cursor:pointer;
-}
+            inset: -1px;
 
+            border-radius: 35px;
 
-/* =========================
-   SOCIAL
-========================= */
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(124,92,255,.45),
+                    transparent 35%,
+                    rgba(0,229,255,.2),
+                    transparent 70%
+                );
 
-.socials{
-    display:flex;
-    gap:12px;
-    margin-top:20px;
-    flex-wrap:wrap;
-}
+            opacity: .4;
 
-.social{
-    padding:10px 16px;
+            pointer-events: none;
+        }
 
-    border:1px solid rgba(255,255,255,0.12);
+        .profile-wrap img {
+            width: 100%;
+            height: 100%;
 
-    border-radius:7px;
+            object-fit: cover;
 
-    color:#aaa;
+            border-radius: 27px;
 
-    transition:0.3s;
-}
+            display: block;
 
-.social:hover{
-    color:#00e5ff;
-    border-color:#00e5ff;
-}
+            filter:
+                brightness(.95)
+                contrast(1.05);
+        }
 
+        .float-card {
+            position: absolute;
 
-/* =========================
-   FOOTER
-========================= */
+            padding: 12px 15px;
 
-footer{
-    padding:30px 0;
+            border-radius: 12px;
 
-    border-top:1px solid rgba(255,255,255,0.08);
+            background: rgba(8,11,30,.82);
 
-    text-align:center;
+            border: 1px solid rgba(255,255,255,.12);
 
-    color:#777;
-}
+            backdrop-filter: blur(15px);
 
-footer p{
-    margin:5px 0;
-}
+            color: #dce1ee;
 
+            font-size: 11px;
 
-/* =========================
-   WHATSAPP
-========================= */
+            font-weight: 700;
 
-.whatsapp{
-    position:fixed;
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.35);
+        }
 
-    right:25px;
-    bottom:25px;
+        .float1 {
+            left: -20px;
+            top: 20%;
+        }
 
-    width:56px;
-    height:56px;
+        .float2 {
+            right: -20px;
+            bottom: 18%;
+        }
 
-    display:flex;
 
-    align-items:center;
-    justify-content:center;
+        /* =========================
+           STATS
+        ========================= */
 
-    border-radius:50%;
+        .stats {
+            display: grid;
 
-    background:#25D366;
+            grid-template-columns: repeat(3,1fr);
 
-    color:white;
+            gap: 15px;
 
-    font-size:28px;
+            margin-top: 55px;
+        }
 
-    box-shadow:0 5px 25px rgba(0,0,0,0.4);
+        .stat {
+            padding: 22px;
 
-    z-index:999;
-}
+            border-radius: 15px;
 
+            background: rgba(255,255,255,.035);
 
-/* =========================
-   RESPONSIVE
-========================= */
+            border: 1px solid rgba(255,255,255,.09);
 
-@media(max-width:900px){
+            box-shadow:
+                0 15px 45px rgba(0,0,0,.20);
+        }
 
-    .hero-content{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
+        .stat h3 {
+            font-size: 27px;
 
-    .hero-text p{
-        margin-left:auto;
-        margin-right:auto;
-    }
+            color: white;
+        }
 
-    .buttons{
-        justify-content:center;
-    }
+        .stat p {
+            margin-top: 4px;
 
-    .profile-box{
-        order:-1;
-    }
+            color: #7f879d;
 
-    .profile{
-        width:240px;
-        height:240px;
-    }
+            font-size: 11px;
+        }
 
-    .services-grid,
-    .projects-grid{
-        grid-template-columns:1fr 1fr;
-    }
 
-    .about-grid,
-    .contact-grid,
-    .education-grid,
-    .skills-grid{
-        grid-template-columns:1fr;
-    }
+        /* =========================
+           SECTIONS
+        ========================= */
 
-}
+        section {
+            padding: 110px 0;
+        }
 
+        .section-label {
+            color: #8b76ed;
 
-@media(max-width:650px){
+            font-size: 11px;
 
-    nav{
-        height:65px;
-    }
+            font-weight: 800;
 
-    .nav-container{
-        height:65px;
-    }
+            letter-spacing: 2px;
 
-    .nav-links{
+            text-transform: uppercase;
 
-        display:none;
+            margin-bottom: 13px;
+        }
 
-        position:absolute;
+        .section-title {
+            color: white;
 
-        top:65px;
-        left:0;
+            font-size: clamp(34px,5vw,53px);
 
-        width:100%;
+            line-height: 1.08;
 
-        background:#080c1d;
+            letter-spacing: -2.5px;
 
-        flex-direction:column;
+            font-weight: 900;
+        }
 
-        gap:0;
+        .section-description {
+            max-width: 650px;
 
-        padding:15px 0;
+            margin-top: 15px;
 
-        text-align:center;
-    }
+            color: #8b93a9;
 
-    .nav-links.active{
-        display:flex;
-    }
+            font-size: 14px;
 
-    .nav-links li{
-        padding:12px;
-    }
+            line-height: 1.8;
+        }
 
-    .menu-btn{
-        display:block;
-    }
 
-    .hero-text h1{
-        font-size:43px;
-    }
+        /* =========================
+           ABOUT
+        ========================= */
 
-    .hero-text h2{
-        font-size:18px;
-    }
+        .about-grid {
+            display: grid;
 
-    .section-title h2{
-        font-size:32px;
-    }
+            grid-template-columns: .8fr 1.2fr;
 
-    .services-grid,
-    .projects-grid{
-        grid-template-columns:1fr;
-    }
+            gap: 25px;
 
-    section{
-        padding:75px 0;
-    }
+            margin-top: 45px;
+        }
 
-    .whatsapp{
-        right:18px;
-        bottom:18px;
-    }
+        .about-profile,
+        .info-card,
+        .service-card,
+        .skill-card,
+        .project-card,
+        .contact-card,
+        .timeline-card,
+        .education-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.055),
+                    rgba(255,255,255,.025)
+                );
 
-}
+            border: 1px solid rgba(255,255,255,.09);
 
-</style>
+            box-shadow:
+                0 15px 50px rgba(0,0,0,.18);
+        }
+
+        .about-profile {
+            padding: 30px;
+
+            border-radius: 20px;
+        }
+
+        .mini-profile {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .mini-profile img {
+            width: 65px;
+            height: 65px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 1px solid rgba(255,255,255,.13);
+        }
+
+        .mini-profile h3 {
+            color: white;
+
+            font-size: 17px;
+        }
+
+        .mini-profile p {
+            color: #80889e;
+
+            font-size: 12px;
+        }
+
+        .about-profile > p {
+            color: #8a92a7;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .location {
+            margin-top: 22px;
+
+            padding: 12px 14px;
+
+            border-radius: 10px;
+
+            background: rgba(255,255,255,.035);
+
+            border: 1px solid rgba(255,255,255,.06);
+
+            color: #9ca3b6;
+
+            font-size: 12px;
+        }
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 14px;
+        }
+
+        .info-card {
+            padding: 25px;
+
+            border-radius: 17px;
+        }
+
+        .info-card span {
+            display: block;
+
+            color: #70788e;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .info-card strong {
+            display: block;
+
+            color: #e4e7ef;
+
+            font-size: 14px;
+
+            margin-top: 8px;
+        }
+
+        .highlights {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 16px;
+        }
+
+        .tag {
+            padding: 7px 10px;
+
+            border-radius: 8px;
+
+            background: rgba(124,92,255,.06);
+
+            border: 1px solid rgba(124,92,255,.12);
+
+            color: #959bb0;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 16px;
+
+            margin-top: 45px;
+        }
+
+        .service-card {
+            padding: 30px;
+
+            border-radius: 18px;
+
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(124,92,255,.35);
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.35),
+                0 0 30px rgba(124,92,255,.08);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(124,92,255,.18),
+                    rgba(0,229,255,.08)
+                );
+
+            border: 1px solid rgba(124,92,255,.18);
+
+            font-size: 21px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #e5e8f0;
+
+            font-size: 17px;
+
+            margin-bottom: 9px;
+        }
+
+        .service-card p {
+            color: #858da2;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 15px;
+
+            margin-top: 45px;
+        }
+
+        .skill-card {
+            padding: 23px;
+
+            border-radius: 16px;
+        }
+
+        .skill-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 11px;
+        }
+
+        .skill-top span:first-child {
+            color: #c0c5d2;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+        .skill-top span:last-child {
+            color: #858da1;
+
+            font-size: 11px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 6px;
+
+            border-radius: 10px;
+
+            background: rgba(255,255,255,.055);
+
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #664be0,
+                    #00cde7
+                );
+
+            box-shadow:
+                0 0 12px rgba(0,205,231,.25);
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .timeline {
+            margin-top: 45px;
+
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 10px;
+
+            top: 0;
+            bottom: 0;
+
+            width: 1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(124,92,255,.6),
+                    rgba(255,255,255,.05)
+                );
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 42px;
+
+            margin-bottom: 35px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 5px;
+            top: 5px;
+
+            width: 11px;
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: #7c5cff;
+
+            border: 3px solid #050816;
+
+            box-shadow:
+                0 0 15px rgba(124,92,255,.7);
+        }
+
+        .timeline-card {
+            padding: 25px;
+
+            border-radius: 18px;
+        }
+
+        .timeline-year {
+            color: #8b76ed;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .timeline-card h3 {
+            color: #e6e9f1;
+
+            font-size: 18px;
+
+            margin-top: 7px;
+        }
+
+        .timeline-card h4 {
+            color: #858da1;
+
+            font-size: 12px;
+
+            margin-top: 3px;
+        }
+
+        .timeline-card p {
+            color: #7d8599;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin-top: 12px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-card {
+            margin-top: 45px;
+
+            padding: 32px;
+
+            border-radius: 20px;
+        }
+
+        .education-card h3 {
+            color: #e7eaf1;
+
+            font-size: 21px;
+        }
+
+        .education-card p {
+            color: #858da1;
+
+            font-size: 13px;
+
+            margin-top: 8px;
+        }
+
+        .education-badge {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 7px 11px;
+
+            border-radius: 7px;
+
+            background: rgba(124,92,255,.09);
+
+            border: 1px solid rgba(124,92,255,.18);
+
+            color: #a494f5;
+
+            font-size: 10px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 16px;
+
+            margin-top: 45px;
+        }
+
+        .project-card {
+            padding: 26px;
+
+            border-radius: 18px;
+
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0,229,255,.18);
+        }
+
+        .project-number {
+            color: #7263b7;
+
+            font-size: 10px;
+
+            font-weight: 800;
+        }
+
+        .project-card h3 {
+            color: #e4e7ef;
+
+            font-size: 18px;
+
+            margin-top: 18px;
+        }
+
+        .project-card p {
+            color: #858da1;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin-top: 10px;
+        }
+
+        .project-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 6px;
+
+            margin-top: 18px;
+        }
+
+        .project-tag {
+            padding: 6px 9px;
+
+            background: rgba(255,255,255,.035);
+
+            border: 1px solid rgba(255,255,255,.07);
+
+            border-radius: 7px;
+
+            color: #858da0;
+
+            font-size: 9px;
+        }
+
+        .project-link {
+            display: inline-block;
+
+            margin-top: 22px;
+
+            color: #9a88f2;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 18px;
+
+            margin-top: 45px;
+        }
+
+        .contact-card {
+            padding: 28px;
+
+            border-radius: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            gap: 14px;
+
+            align-items: center;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+
+        .contact-item:last-child {
+            border-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 11px;
+
+            background: rgba(124,92,255,.08);
+
+            border: 1px solid rgba(124,92,255,.12);
+        }
+
+        .contact-item span {
+            display: block;
+
+            color: #697186;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .contact-item strong {
+            color: #c4c9d6;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+        form {
+            display: grid;
+
+            gap: 13px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            border: 1px solid rgba(255,255,255,.08);
+
+            background: rgba(255,255,255,.035);
+
+            color: #e2e6ef;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 12px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: rgba(124,92,255,.45);
+
+            background: rgba(255,255,255,.05);
+
+            box-shadow:
+                0 0 20px rgba(124,92,255,.06);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #666e83;
+        }
+
+        textarea {
+            min-height: 140px;
+
+            resize: vertical;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 0;
+
+            border-top: 1px solid rgba(255,255,255,.07);
+
+            text-align: center;
+
+            color: #697186;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #19c77a,
+                    #078d59
+                );
+
+            color: white;
+
+            font-size: 23px;
+
+            border: 1px solid rgba(255,255,255,.14);
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,.45),
+                0 0 25px rgba(0,255,157,.18);
+
+            z-index: 900;
+
+            transition: .25s;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+
+        /* =========================
+           REVEAL
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity .7s ease,
+                transform .7s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px) {
+
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .float1 {
+                left: 0;
+            }
+
+            .float2 {
+                right: 0;
+            }
+        }
+
+
+        @media(max-width:700px) {
+
+            nav {
+                height: 68px;
+            }
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 68px;
+
+                left: 4%;
+
+                width: 92%;
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 18px;
+
+                background: rgba(5,8,22,.96);
+
+                border: 1px solid rgba(255,255,255,.10);
+
+                border-radius: 15px;
+
+                box-shadow:
+                    0 20px 60px rgba(0,0,0,.5);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding-top: 110px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+
+                letter-spacing: -3px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .skills-grid,
+            .projects-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .profile-wrap {
+                width: min(340px,86vw);
+            }
+
+            .float-card {
+                font-size: 9px;
+
+                padding: 9px 11px;
+            }
+
+            .float1 {
+                left: -5px;
+            }
+
+            .float2 {
+                right: -5px;
+            }
+        }
+
+
+        @media(max-width:450px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 35px;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -808,1069 +1513,1487 @@ footer p{
 <body>
 
 
-<!-- =========================
-     NAVBAR
-========================= -->
+    <!-- BACKGROUND -->
 
-<nav>
+    <div class="grid"></div>
 
-<div class="nav-container">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
 
-<div class="logo">
-Muhammad <span>Awais</span>
-</div>
 
-<div class="menu-btn" onclick="toggleMenu()">
-☰
-</div>
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-<ul class="nav-links" id="navLinks">
+    <nav>
 
-<li>
-<a href="#home">Home</a>
-</li>
+        <div class="nav-inner">
 
-<li>
-<a href="#about">About</a>
-</li>
+            <a href="#home" class="logo">
+                AW<span>.</span>
+            </a>
 
-<li>
-<a href="#services">Services</a>
-</li>
+            <ul class="nav-links" id="navLinks">
 
-<li>
-<a href="#skills">Skills</a>
-</li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-<li>
-<a href="#experience">Experience</a>
-</li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-<li>
-<a href="#education">Education</a>
-</li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
 
-<li>
-<a href="#projects">Projects</a>
-</li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-<li>
-<a href="#contact">Contact</a>
-</li>
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
 
-</ul>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-</div>
+                <li>
+                    <a href="#contact" class="nav-btn">
+                        Contact
+                    </a>
+                </li>
 
-</nav>
+            </ul>
 
+            <button
+                class="menu-btn"
+                id="menuBtn">
+                ☰
+            </button>
 
+        </div>
 
-<!-- =========================
-     HERO
-========================= -->
+    </nav>
 
-<section class="hero" id="home">
 
-<div class="container">
+    <!-- =========================
+         HERO
+    ========================= -->
 
-<div class="hero-content">
+    <main id="home">
 
+        <section class="hero">
 
-<div class="hero-text">
+            <div class="container">
 
-<small>
-HELLO, I'M
-</small>
+                <div class="hero-grid">
 
-<h1>
-Muhammad <span>Awais</span><br>
-Khan Abbasi
-</h1>
 
-<h2>
-Web Developer • Software Developer • AI Assistant Developer
-</h2>
+                    <div class="reveal">
 
-<p>
-I build modern, responsive and user-friendly digital experiences.
-I also work with software development, computer operations and
-AI assistant projects.
-</p>
+                        <div class="badge">
 
-<div class="buttons">
+                            <span class="dot"></span>
 
-<a
-href="#projects"
-class="btn btn-primary">
-🚀 View My Projects
-</a>
+                            Available for Work
 
-<a
-href="cv.pdf"
-class="btn btn-secondary"
-download>
-📄 Download CV
-</a>
+                        </div>
 
-<a
-href="#contact"
-class="btn btn-secondary">
-📩 Contact Me
-</a>
 
-</div>
+                        <h1>
 
-</div>
+                            Muhammad<br>
 
+                            <span class="gradient">
+                                Awais
+                            </span><br>
 
-<div class="profile-box">
+                            Khan Abbasi
 
-<img
-src="profile.jpg"
-class="profile"
-alt="Muhammad Awais Khan Abbasi">
+                        </h1>
 
-</div>
 
+                        <div class="typing">
 
-</div>
+                            <span id="typingText"></span>
 
-</div>
+                            <span class="cursor">
+                                |
+                            </span>
 
-</section>
+                        </div>
 
 
+                        <p class="hero-description">
 
-<!-- =========================
-     ABOUT
-========================= -->
+                            I am a Software Engineering student and
+                            technology-focused professional with practical
+                            experience in computer operations, customer dealing,
+                            hotel services and modern web development.
 
-<section id="about">
+                        </p>
 
-<div class="container">
 
-<div class="section-title">
+                        <div class="hero-buttons">
 
-<small>
-WHO I AM
-</small>
+                            <a
+                                href="#projects"
+                                class="btn btn-primary">
 
-<h2>
-About Me
-</h2>
+                                🚀 View Projects
 
-</div>
+                            </a>
 
 
-<div class="about-grid">
+                            <a
+                                href="cv.pdf"
+                                class="btn btn-dark"
+                                download>
 
+                                📄 Download CV
 
-<div class="card">
+                            </a>
 
-<h3>
-👨‍💻 Developer
-</h3>
 
-<p>
-I am a Software Engineering student interested in web development,
-software development, artificial intelligence and modern technology.
-I enjoy creating practical digital solutions and learning new technologies.
-</p>
+                            <a
+                                href="#contact"
+                                class="btn btn-dark">
 
-</div>
+                                💬 Contact Me
 
+                            </a>
 
-<div class="card">
+                        </div>
 
-<h3>
-🎯 My Goal
-</h3>
+                    </div>
 
-<p>
-My goal is to become a professional software developer and build
-high-quality websites, applications and intelligent AI-based systems
-that solve real-world problems.
-</p>
 
-</div>
+                    <!-- PROFILE -->
 
+                    <div class="hero-visual reveal">
 
-</div>
+                        <div class="profile-wrap">
 
-</div>
+                            <img
+                                src="profile.jpg"
+                                alt="Muhammad Awais Khan Abbasi">
 
-</section>
 
+                            <div class="float-card float1">
 
+                                💻 Software Engineering
 
-<!-- =========================
-     SERVICES
-========================= -->
+                            </div>
 
-<section id="services">
 
-<div class="container">
+                            <div class="float-card float2">
 
-<div class="section-title">
+                                ⚡ Creative Developer
 
-<small>
-WHAT I DO
-</small>
+                            </div>
 
-<h2>
-My Services
-</h2>
+                        </div>
 
-</div>
+                    </div>
 
+                </div>
 
-<div class="services-grid">
 
+                <!-- STATS -->
 
-<div class="service">
+                <div class="stats reveal">
 
-<div class="service-icon">
-🌐
-</div>
+                    <div class="stat">
 
-<h3>
-Web Development
-</h3>
+                        <h3>
+                            4+
+                        </h3>
 
-<p>
-Modern, responsive and user-friendly websites for businesses,
-personal brands and projects.
-</p>
+                        <p>
+                            Years Combined Experience
+                        </p>
 
-</div>
+                    </div>
 
 
-<div class="service">
+                    <div class="stat">
 
-<div class="service-icon">
-💻
-</div>
+                        <h3>
+                            3+
+                        </h3>
 
-<h3>
-Software Development
-</h3>
+                        <p>
+                            Years Computer Operations
+                        </p>
 
-<p>
-Development of useful software solutions and desktop-based applications.
-</p>
+                    </div>
 
-</div>
 
+                    <div class="stat">
 
-<div class="service">
+                        <h3>
+                            1+
+                        </h3>
 
-<div class="service-icon">
-🤖
-</div>
+                        <p>
+                            Year Hotel Experience
+                        </p>
 
-<h3>
-AI Assistant
-</h3>
+                    </div>
 
-<p>
-Development of AI assistant systems with voice interaction,
-automation and smart commands.
-</p>
+                </div>
 
-</div>
+            </div>
 
+        </section>
 
-<div class="service">
 
-<div class="service-icon">
-🎨
-</div>
+        <!-- =========================
+             ABOUT
+        ========================= -->
 
-<h3>
-UI / UX Design
-</h3>
+        <section id="about">
 
-<p>
-Clean, modern and attractive interfaces designed for better user experience.
-</p>
+            <div class="container">
 
-</div>
+                <div class="reveal">
 
+                    <div class="section-label">
+                        About Me
+                    </div>
 
-<div class="service">
+                    <h2 class="section-title">
 
-<div class="service-icon">
-📱
-</div>
+                        More Than Just<br>
+                        A Portfolio
 
-<h3>
-Responsive Design
-</h3>
+                    </h2>
 
-<p>
-Websites that work smoothly on mobile phones, tablets and computers.
-</p>
+                    <p class="section-description">
 
-</div>
+                        A combination of education,
+                        practical experience,
+                        technology skills and continuous learning.
 
+                    </p>
 
-<div class="service">
+                </div>
 
-<div class="service-icon">
-🔧
-</div>
 
-<h3>
-Website Maintenance
-</h3>
+                <div class="about-grid">
 
-<p>
-Website updates, content changes, bug fixing and basic improvements.
-</p>
 
-</div>
+                    <div class="about-profile reveal">
 
+                        <div class="mini-profile">
 
-</div>
+                            <img
+                                src="profile.jpg"
+                                alt="Muhammad Awais">
 
-</div>
 
-</section>
+                            <div>
 
+                                <h3>
+                                    Muhammad Awais
+                                </h3>
 
+                                <p>
+                                    Software Engineering Student
+                                </p>
 
-<!-- =========================
-     SKILLS
-========================= -->
+                            </div>
 
-<section id="skills">
+                        </div>
 
-<div class="container">
 
-<div class="section-title">
+                        <p>
 
-<small>
-MY ABILITIES
-</small>
+                            I am passionate about technology,
+                            web development and solving
+                            real-world problems through
+                            practical digital solutions.
 
-<h2>
-Skills
-</h2>
+                        </p>
 
-</div>
 
+                        <div class="location">
 
-<div class="skills-grid">
+                            📍 Multan, Punjab, Pakistan
 
+                        </div>
 
-<div>
+                    </div>
 
 
-<div class="skill">
+                    <div class="info-grid reveal">
 
-<div class="skill-info">
 
-<span>HTML</span>
-<span>90%</span>
+                        <div class="info-card">
 
-</div>
+                            <span>
+                                EXPERIENCE
+                            </span>
 
-<div class="progress">
+                            <strong>
+                                4+ Years
+                            </strong>
 
-<div
-class="progress-bar"
-style="width:90%">
-</div>
+                        </div>
 
-</div>
 
-</div>
+                        <div class="info-card">
 
+                            <span>
+                                EDUCATION
+                            </span>
 
-<div class="skill">
+                            <strong>
+                                BS Software Engineering
+                            </strong>
 
-<div class="skill-info">
+                        </div>
 
-<span>CSS</span>
-<span>85%</span>
 
-</div>
+                        <div class="info-card">
 
-<div class="progress">
+                            <span>
+                                COMPUTER OPERATIONS
+                            </span>
 
-<div
-class="progress-bar"
-style="width:85%">
-</div>
+                            <strong>
+                                3+ Years
+                            </strong>
 
-</div>
+                        </div>
 
-</div>
 
+                        <div class="info-card">
 
-<div class="skill">
+                            <span>
+                                HOTEL EXPERIENCE
+                            </span>
 
-<div class="skill-info">
+                            <strong>
+                                1+ Year
+                            </strong>
 
-<span>JavaScript</span>
-<span>75%</span>
+                        </div>
 
-</div>
 
-<div class="progress">
+                        <div class="info-card">
 
-<div
-class="progress-bar"
-style="width:75%">
-</div>
+                            <span>
+                                HIGHLIGHTS
+                            </span>
 
-</div>
+                            <div class="highlights">
 
-</div>
+                                <span class="tag">
+                                    Continuous Learning
+                                </span>
 
+                                <span class="tag">
+                                    Practical Experience
+                                </span>
 
-<div class="skill">
+                                <span class="tag">
+                                    Problem Solving
+                                </span>
 
-<div class="skill-info">
+                                <span class="tag">
+                                    Teamwork
+                                </span>
 
-<span>Python</span>
-<span>80%</span>
+                            </div>
 
-</div>
+                        </div>
 
-<div class="progress">
 
-<div
-class="progress-bar"
-style="width:80%">
-</div>
+                        <div class="info-card">
 
-</div>
+                            <span>
+                                LANGUAGES
+                            </span>
 
-</div>
+                            <div class="highlights">
 
+                                <span class="tag">
+                                    Urdu
+                                </span>
 
-</div>
+                                <span class="tag">
+                                    English
+                                </span>
 
+                                <span class="tag">
+                                    Sindhi
+                                </span>
 
-<div>
+                                <span class="tag">
+                                    Punjabi
+                                </span>
 
+                            </div>
 
-<div class="skill">
+                        </div>
 
-<div class="skill-info">
+                    </div>
 
-<span>Flask</span>
-<span>75%</span>
+                </div>
 
-</div>
+            </div>
 
-<div class="progress">
+        </section>
 
-<div
-class="progress-bar"
-style="width:75%">
-</div>
 
-</div>
+        <!-- =========================
+             SERVICES
+        ========================= -->
 
-</div>
+        <section id="services">
 
+            <div class="container">
 
-<div class="skill">
+                <div class="reveal">
 
-<div class="skill-info">
+                    <div class="section-label">
+                        What I Do
+                    </div>
 
-<span>MS Office</span>
-<span>90%</span>
+                    <h2 class="section-title">
+                        My Services
+                    </h2>
 
-</div>
+                    <p class="section-description">
 
-<div class="progress">
+                        Practical services based on my
+                        technical and professional experience.
 
-<div
-class="progress-bar"
-style="width:90%">
-</div>
+                    </p>
 
-</div>
+                </div>
 
-</div>
 
+                <div class="services-grid">
 
-<div class="skill">
 
-<div class="skill-info">
+                    <div class="service-card reveal">
 
-<span>Computer Operations</span>
-<span>90%</span>
+                        <div class="service-icon">
+                            🌐
+                        </div>
 
-</div>
+                        <h3>
+                            Web Development
+                        </h3>
 
-<div class="progress">
+                        <p>
 
-<div
-class="progress-bar"
-style="width:90%">
-</div>
+                            Modern responsive websites using
+                            HTML, CSS and JavaScript with
+                            clean and professional interfaces.
 
-</div>
+                        </p>
 
-</div>
+                    </div>
 
 
-<div class="skill">
+                    <div class="service-card reveal">
 
-<div class="skill-info">
+                        <div class="service-icon">
+                            💻
+                        </div>
 
-<span>Data Entry</span>
-<span>90%</span>
+                        <h3>
+                            Computer Operations
+                        </h3>
 
-</div>
+                        <p>
 
-<div class="progress">
+                            Data entry, documentation,
+                            MS Office, printing, scanning
+                            and general computer operations.
 
-<div
-class="progress-bar"
-style="width:90%">
-</div>
+                        </p>
 
-</div>
+                    </div>
 
-</div>
 
+                    <div class="service-card reveal">
 
-</div>
+                        <div class="service-icon">
+                            🤝
+                        </div>
 
-</div>
+                        <h3>
+                            Customer Service
+                        </h3>
 
-</div>
+                        <p>
 
-</section>
+                            Customer dealing, guest support,
+                            communication and professional
+                            workplace assistance.
 
+                        </p>
 
+                    </div>
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+                </div>
 
-<section id="experience">
+            </div>
 
-<div class="container">
+        </section>
 
-<div class="section-title">
 
-<small>
-MY JOURNEY
-</small>
+        <!-- =========================
+             SKILLS
+        ========================= -->
 
-<h2>
-Work Experience
-</h2>
+        <section id="skills">
 
-</div>
+            <div class="container">
 
+                <div class="reveal">
 
-<div class="timeline">
+                    <div class="section-label">
+                        My Skills
+                    </div>
 
+                    <h2 class="section-title">
+                        Skills & Expertise
+                    </h2>
 
-<div class="timeline-item">
+                </div>
 
-<h3>
-Hotel Staff / Waiter
-</h3>
 
-<h4>
-Lasani Pizza Hotel — Sukkur, Sindh
-</h4>
+                <div class="skills-grid">
 
-<span>
-1 Year Experience
-</span>
 
-<p>
-Customer dealing, guest assistance, taking and serving orders,
-workplace organization and supporting daily hotel operations.
-</p>
+                    <div class="skill-card reveal">
 
-</div>
+                        <div class="skill-top">
 
+                            <span>
+                                HTML / Web Development
+                            </span>
 
-<div class="timeline-item">
+                            <span>
+                                90%
+                            </span>
 
-<h3>
-Computer Operator
-</h3>
+                        </div>
 
-<h4>
-Cola Next — Sukkur, Sindh
-</h4>
+                        <div class="bar">
 
-<span>
-3 Years Experience
-</span>
+                            <div
+                                class="fill"
+                                style="width:90%">
+                            </div>
 
-<p>
-MS Word, Excel, PowerPoint, data entry, typing, printing,
-scanning, record management and general office support.
-</p>
+                        </div>
 
-</div>
+                    </div>
 
 
-</div>
+                    <div class="skill-card reveal">
 
-</div>
+                        <div class="skill-top">
 
-</section>
+                            <span>
+                                MS Word
+                            </span>
 
+                            <span>
+                                90%
+                            </span>
 
+                        </div>
 
-<!-- =========================
-     EDUCATION
-========================= -->
+                        <div class="bar">
 
-<section id="education">
+                            <div
+                                class="fill"
+                                style="width:90%">
+                            </div>
 
-<div class="container">
+                        </div>
 
-<div class="section-title">
+                    </div>
 
-<small>
-MY QUALIFICATION
-</small>
 
-<h2>
-Education
-</h2>
+                    <div class="skill-card reveal">
 
-</div>
+                        <div class="skill-top">
 
+                            <span>
+                                MS Excel
+                            </span>
 
-<div class="education-grid">
+                            <span>
+                                85%
+                            </span>
 
+                        </div>
 
-<div class="education-card">
+                        <div class="bar">
 
-<h3>
-🎓 BS Software Engineering
-</h3>
+                            <div
+                                class="fill"
+                                style="width:85%">
+                            </div>
 
-<p>
-NFC Institute of Engineering & Technology, Multan
-</p>
+                        </div>
 
-<br>
+                    </div>
 
-<p>
-Currently studying Software Engineering with interest in
-software development, web technologies and artificial intelligence.
-</p>
 
-</div>
+                    <div class="skill-card reveal">
 
+                        <div class="skill-top">
 
-<div class="education-card">
+                            <span>
+                                Data Entry
+                            </span>
 
-<h3>
-💻 Technical Learning
-</h3>
+                            <span>
+                                95%
+                            </span>
 
-<p>
-HTML • CSS • JavaScript • Python • Flask
-</p>
+                        </div>
 
-<br>
+                        <div class="bar">
 
-<p>
-Continuously learning modern programming technologies and
-building practical software projects.
-</p>
+                            <div
+                                class="fill"
+                                style="width:95%">
+                            </div>
 
-</div>
+                        </div>
 
+                    </div>
 
-</div>
 
-</div>
+                    <div class="skill-card reveal">
 
-</section>
+                        <div class="skill-top">
 
+                            <span>
+                                Customer Dealing
+                            </span>
 
+                            <span>
+                                90%
+                            </span>
 
-<!-- =========================
-     PROJECTS
-========================= -->
+                        </div>
 
-<section id="projects">
+                        <div class="bar">
 
-<div class="container">
+                            <div
+                                class="fill"
+                                style="width:90%">
+                            </div>
 
-<div class="section-title">
+                        </div>
 
-<small>
-MY WORK
-</small>
+                    </div>
 
-<h2>
-Projects
-</h2>
 
-</div>
+                    <div class="skill-card reveal">
 
+                        <div class="skill-top">
 
-<div class="projects-grid">
+                            <span>
+                                Communication
+                            </span>
 
+                            <span>
+                                85%
+                            </span>
 
-<div class="project">
+                        </div>
 
-<h3>
-🛍️ Abbasi Collection
-</h3>
+                        <div class="bar">
 
-<p>
-A modern e-commerce website concept for clothing,
-perfumes, shoes and other products.
-</p>
+                            <div
+                                class="fill"
+                                style="width:85%">
+                            </div>
 
-<span class="coming">
-COMING SOON
-</span>
+                        </div>
 
-</div>
+                    </div>
 
+                </div>
 
-<div class="project">
+            </div>
 
-<h3>
-🤖 Muskan AI Assistant
-</h3>
+        </section>
 
-<p>
-A personal AI assistant project with voice interaction,
-smart commands and automation features.
-</p>
 
-<span class="coming">
-COMING SOON
-</span>
+        <!-- =========================
+             EXPERIENCE
+        ========================= -->
 
-</div>
+        <section id="experience">
 
+            <div class="container">
 
-<div class="project">
+                <div class="reveal">
 
-<h3>
-💼 Portfolio Website
-</h3>
+                    <div class="section-label">
+                        Career
+                    </div>
 
-<p>
-My personal developer portfolio built with modern HTML,
-CSS and responsive design.
-</p>
+                    <h2 class="section-title">
+                        Work Experience
+                    </h2>
 
-<a
-href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
-target="_blank"
-class="project-btn">
-View Project →
-</a>
+                </div>
 
-</div>
 
+                <div class="timeline">
 
-</div>
 
-</div>
+                    <div class="timeline-item reveal">
 
-</section>
+                        <div class="timeline-dot"></div>
 
+                        <div class="timeline-card">
 
+                            <div class="timeline-year">
+                                1 YEAR EXPERIENCE
+                            </div>
 
-<!-- =========================
-     CONTACT
-========================= -->
+                            <h3>
+                                Hotel Staff
+                            </h3>
 
-<section id="contact">
+                            <h4>
+                                Lasani Pizza Hotel — Sukkur, Sindh
+                            </h4>
 
-<div class="container">
+                            <p>
 
-<div class="section-title">
+                                Customer dealing, guest service,
+                                restaurant support and teamwork
+                                in a professional hotel environment.
 
-<small>
-GET IN TOUCH
-</small>
+                            </p>
 
-<h2>
-Contact Me
-</h2>
+                        </div>
 
-</div>
+                    </div>
 
 
-<div class="contact-grid">
+                    <div class="timeline-item reveal">
 
+                        <div class="timeline-dot"></div>
 
-<div>
+                        <div class="timeline-card">
 
+                            <div class="timeline-year">
+                                3 YEARS EXPERIENCE
+                            </div>
 
-<div class="contact-info">
+                            <h3>
+                                Computer Operator
+                            </h3>
 
+                            <h4>
+                                Cola Next — Sukkur, Sindh
+                            </h4>
 
-<div class="contact-item">
+                            <p>
 
-<strong>
-📞 Phone / WhatsApp
-</strong>
+                                Computer operations, data entry,
+                                documentation, MS Office and
+                                daily office-related tasks.
 
-<p>
-03148160348
-</p>
+                            </p>
 
-</div>
+                        </div>
 
+                    </div>
 
-<div class="contact-item">
+                </div>
 
-<strong>
-✉️ Email
-</strong>
+            </div>
 
-<p>
-awaiskhanabbasiabbasi@gmail.com
-</p>
+        </section>
 
-</div>
 
+        <!-- =========================
+             EDUCATION
+        ========================= -->
 
-<div class="contact-item">
+        <section id="education">
 
-<strong>
-📍 Location
-</strong>
+            <div class="container">
 
-<p>
-Multan, Punjab, Pakistan
-</p>
+                <div class="reveal">
 
-</div>
+                    <div class="section-label">
+                        Education
+                    </div>
 
+                    <h2 class="section-title">
+                        Academic Journey
+                    </h2>
 
-<div class="contact-item">
+                </div>
 
-<strong>
-💼 Availability
-</strong>
 
-<p>
-Full-Time / Part-Time
-</p>
+                <div class="education-card reveal">
 
-</div>
+                    <h3>
+                        BS Software Engineering
+                    </h3>
 
+                    <p>
 
-</div>
+                        NFC Institute of Engineering &
+                        Technology, Multan, Punjab, Pakistan
 
+                    </p>
 
-<div class="socials">
+                    <div class="education-badge">
+                        CURRENTLY STUDYING
+                    </div>
 
-<a
-href="https://github.com/MuhammadAwaisKhanAbbasi"
-target="_blank"
-class="social">
-GitHub
-</a>
+                </div>
 
-<a
-href="mailto:awaiskhanabbasiabbasi@gmail.com"
-class="social">
-Email
-</a>
+            </div>
 
-<a
-href="https://wa.me/923148160348"
-target="_blank"
-class="social">
-WhatsApp
-</a>
+        </section>
 
-</div>
 
+        <!-- =========================
+             PROJECTS
+        ========================= -->
 
-</div>
+        <section id="projects">
 
+            <div class="container">
 
+                <div class="reveal">
 
-<div class="card">
+                    <div class="section-label">
+                        My Work
+                    </div>
 
-<form onsubmit="sendMessage(event)">
+                    <h2 class="section-title">
+                        Featured Projects
+                    </h2>
 
+                    <p class="section-description">
 
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required>
+                        Projects I am building while developing
+                        my software engineering and technical skills.
 
+                    </p>
 
-<input
-type="email"
-id="email"
-placeholder="Your Email"
-required>
+                </div>
 
 
-<textarea
-id="message"
-placeholder="Your Message"
-required>
-</textarea>
+                <div class="projects-grid">
 
 
-<button
-type="submit"
-class="btn btn-primary">
+                    <div class="project-card reveal">
 
-💬 Send Message on WhatsApp
+                        <div class="project-number">
+                            01 / E-COMMERCE
+                        </div>
 
-</button>
+                        <h3>
+                            Abbasi Collection
+                        </h3>
 
+                        <p>
 
-</form>
+                            An upcoming online shopping platform
+                            focused on clothing, perfumes, shoes
+                            and other products.
 
-</div>
+                        </p>
 
+                        <div class="project-tags">
 
-</div>
+                            <span class="project-tag">
+                                HTML
+                            </span>
 
-</div>
+                            <span class="project-tag">
+                                CSS
+                            </span>
 
-</section>
+                            <span class="project-tag">
+                                JavaScript
+                            </span>
 
+                            <span class="project-tag">
+                                E-Commerce
+                            </span>
 
+                        </div>
 
-<!-- =========================
-     FOOTER
-========================= -->
+                        <span class="project-link">
+                            Coming Soon →
+                        </span>
 
-<footer>
+                    </div>
 
-<div class="container">
 
-<p>
-© 2026 Muhammad Awais Khan Abbasi. All Rights Reserved.
-</p>
+                    <div class="project-card reveal">
 
-<p>
-Built with ❤️ using HTML, CSS & JavaScript
-</p>
+                        <div class="project-number">
+                            02 / ARTIFICIAL INTELLIGENCE
+                        </div>
 
-</div>
+                        <h3>
+                            Muskan AI Assistant
+                        </h3>
 
-</footer>
+                        <p>
 
+                            A personal AI assistant project with
+                            voice interaction, Python backend and
+                            smart computer commands.
 
+                        </p>
 
-<!-- =========================
-     WHATSAPP BUTTON
-========================= -->
+                        <div class="project-tags">
 
-<a
-href="https://wa.me/923148160348"
-target="_blank"
-class="whatsapp"
-title="Chat on WhatsApp">
+                            <span class="project-tag">
+                                Python
+                            </span>
 
-💬
+                            <span class="project-tag">
+                                Flask
+                            </span>
 
-</a>
+                            <span class="project-tag">
+                                AI
+                            </span>
 
+                            <span class="project-tag">
+                                Voice
+                            </span>
 
+                        </div>
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+                        <span class="project-link">
+                            AI Project →
+                        </span>
 
-<script>
+                    </div>
 
 
-function toggleMenu(){
+                    <div class="project-card reveal">
 
-    document
-    .getElementById("navLinks")
-    .classList
-    .toggle("active");
+                        <div class="project-number">
+                            03 / WEB DEVELOPMENT
+                        </div>
 
-}
+                        <h3>
+                            Personal Portfolio
+                        </h3>
 
+                        <p>
 
-function sendMessage(event){
+                            My personal portfolio website designed
+                            to showcase my education, skills,
+                            experience and projects.
 
-    event.preventDefault();
+                        </p>
 
+                        <div class="project-tags">
 
-    const name =
-    document.getElementById("name").value;
+                            <span class="project-tag">
+                                HTML
+                            </span>
 
+                            <span class="project-tag">
+                                CSS
+                            </span>
 
-    const email =
-    document.getElementById("email").value;
+                            <span class="project-tag">
+                                JavaScript
+                            </span>
 
+                            <span class="project-tag">
+                                GitHub Pages
+                            </span>
 
-    const message =
-    document.getElementById("message").value;
+                        </div>
 
+                        <a
+                            class="project-link"
+                            href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
+                            target="_blank">
 
-    const text =
-    "Hello Muhammad Awais,%0A%0A" +
+                            Live Website →
 
-    "Name: " +
-    encodeURIComponent(name) +
+                        </a>
 
-    "%0AEmail: " +
-    encodeURIComponent(email) +
+                    </div>
 
-    "%0A%0AMessage:%0A" +
+                </div>
 
-    encodeURIComponent(message);
+            </div>
 
+        </section>
 
-    const whatsapp =
-    "https://wa.me/923148160348?text=" +
-    text;
 
+        <!-- =========================
+             CONTACT
+        ========================= -->
 
-    window.open(
-        whatsapp,
-        "_blank"
-    );
+        <section id="contact">
 
-}
+            <div class="container">
 
+                <div class="reveal">
 
-/* Close mobile menu after clicking */
+                    <div class="section-label">
+                        Contact
+                    </div>
 
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
+                    <h2 class="section-title">
+                        Let's Work Together
+                    </h2>
 
-    link.addEventListener(
-        "click",
-        function(){
+                    <p class="section-description">
 
-            document
-            .getElementById("navLinks")
-            .classList
-            .remove("active");
+                        Have a project, job opportunity or something
+                        interesting to discuss? Send me a message.
+
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <div class="contact-card reveal">
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                📧
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    EMAIL
+                                </span>
+
+                                <strong>
+                                    awaiskhanabbasiabbasi@gmail.com
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                📱
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    PHONE
+                                </span>
+
+                                <strong>
+                                    03148160348
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                📍
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    LOCATION
+                                </span>
+
+                                <strong>
+                                    Multan, Punjab, Pakistan
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                💻
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    GITHUB
+                                </span>
+
+                                <strong>
+                                    MuhammadAwaisKhanAbbasi
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-card reveal">
+
+                        <form id="contactForm">
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Your Name"
+                                required>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Your Email"
+                                required>
+
+
+                            <textarea
+                                id="message"
+                                placeholder="Your Message"
+                                required>
+                            </textarea>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                Send Message 🚀
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Muhammad Awais Khan Abbasi.
+        All Rights Reserved.
+
+    </footer>
+
+
+    <!-- =========================
+         WHATSAPP
+    ========================= -->
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/923148160348"
+        target="_blank"
+        aria-label="WhatsApp">
+
+        💬
+
+    </a>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* MOBILE MENU */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener(
+            "click",
+            () => {
+
+                navLinks.classList.toggle("show");
+
+            }
+        );
+
+
+        /* CLOSE MENU */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        navLinks.classList.remove("show");
+
+                    }
+                );
+
+            });
+
+
+        /* TYPING EFFECT */
+
+        const typingText =
+            document.getElementById("typingText");
+
+
+        const phrases = [
+
+            "Software Engineering Student",
+
+            "Web Developer",
+
+            "Computer Operator",
+
+            "Creative Problem Solver",
+
+            "Future Software Engineer"
+
+        ];
+
+
+        let phraseIndex = 0;
+
+        let charIndex = 0;
+
+        let deleting = false;
+
+
+        function typeEffect() {
+
+            const current =
+                phrases[phraseIndex];
+
+
+            if (!deleting) {
+
+                typingText.textContent =
+                    current.substring(
+                        0,
+                        charIndex + 1
+                    );
+
+                charIndex++;
+
+
+                if (
+                    charIndex ===
+                    current.length
+                ) {
+
+                    deleting = true;
+
+                    setTimeout(
+                        typeEffect,
+                        1500
+                    );
+
+                    return;
+                }
+
+            } else {
+
+                typingText.textContent =
+                    current.substring(
+                        0,
+                        charIndex - 1
+                    );
+
+                charIndex--;
+
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    phraseIndex =
+                        (
+                            phraseIndex + 1
+                        ) % phrases.length;
+
+                }
+
+            }
+
+
+            setTimeout(
+                typeEffect,
+                deleting ? 45 : 75
+            );
 
         }
-    );
-
-});
 
 
-</script>
+        typeEffect();
+
+
+        /* SCROLL REVEAL */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        function revealOnScroll() {
+
+            revealElements.forEach(
+                element => {
+
+                    const position =
+                        element
+                            .getBoundingClientRect()
+                            .top;
+
+                    const windowHeight =
+                        window.innerHeight;
+
+
+                    if (
+                        position <
+                        windowHeight - 80
+                    ) {
+
+                        element.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
+
+        revealOnScroll();
+
+
+        /* CONTACT FORM */
+
+        const contactForm =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        contactForm.addEventListener(
+            "submit",
+            function(e) {
+
+                e.preventDefault();
+
+
+                const name =
+                    document
+                        .getElementById("name")
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+
+                const message =
+                    document
+                        .getElementById("message")
+                        .value
+                        .trim();
+
+
+                const whatsappMessage =
+
+                    `Hello Muhammad Awais!%0A%0A` +
+
+                    `Name: ${
+                        encodeURIComponent(name)
+                    }%0A` +
+
+                    `Email: ${
+                        encodeURIComponent(email)
+                    }%0A%0A` +
+
+                    `Message:%0A${
+                        encodeURIComponent(message)
+                    }`;
+
+
+                window.open(
+
+                    `https://wa.me/923148160348?text=${whatsappMessage}`,
+
+                    "_blank"
+
+                );
+
+            }
+        );
+
+    </script>
 
 
 </body>
