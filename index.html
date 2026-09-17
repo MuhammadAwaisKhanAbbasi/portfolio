@@ -3,1029 +3,804 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muhammad Awais Khan Abbasi | Developer</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050816;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+
+    background:rgba(5,8,22,0.88);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    z-index:9999;
+}
+
+.nav-container{
+    width:90%;
+    max-width:1150px;
+    height:70px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#00e5ff;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#cccccc;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00e5ff;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title small{
+    color:#00e5ff;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-top:8px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    padding-top:70px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at 80% 30%,rgba(0,229,255,0.10),transparent 35%),
+    radial-gradient(circle at 20% 70%,rgba(0,229,255,0.06),transparent 30%);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero-text small{
+    color:#00e5ff;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    line-height:1.05;
+    margin:15px 0;
+}
+
+.hero-text h1 span{
+    color:#00e5ff;
+}
+
+.hero-text h2{
+    color:#aaa;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#999;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#00e5ff;
+    color:#001018;
+}
+
+.btn-secondary{
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,229,255,0.15);
+}
 
-    <meta name="description"
-        content="Muhammad Awais Khan Abbasi - Web Developer, Software Developer and AI Assistant Developer.">
 
-    <meta name="author" content="Muhammad Awais Khan Abbasi">
+/* =========================
+   PROFILE
+========================= */
 
-    <title>Muhammad Awais Khan Abbasi | Developer</title>
+.profile-box{
+    display:flex;
+    justify-content:center;
+}
 
+.profile{
+    width:320px;
+    height:320px;
 
-    <style>
+    object-fit:cover;
 
-        /* =========================
-           RESET
-        ========================= */
+    border-radius:50%;
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    border:5px solid #00e5ff;
 
+    box-shadow:
+    0 0 30px rgba(0,229,255,0.25),
+    0 0 80px rgba(0,229,255,0.08);
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #07070b;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    animation:float 4s ease-in-out infinite;
+}
 
+@keyframes float{
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    0%,100%{
+        transform:translateY(0);
+    }
 
+    50%{
+        transform:translateY(-12px);
+    }
 
-        /* =========================
-           BACKGROUND
-        ========================= */
+}
 
-        body::before {
-            content: "";
-            position: fixed;
-            width: 450px;
-            height: 450px;
-            background: #00eaff;
-            opacity: 0.06;
-            filter: blur(130px);
-            border-radius: 50%;
-            top: 100px;
-            left: -150px;
-            z-index: -1;
-        }
 
+/* =========================
+   ABOUT
+========================= */
 
-        body::after {
-            content: "";
-            position: fixed;
-            width: 400px;
-            height: 400px;
-            background: #7c3cff;
-            opacity: 0.05;
-            filter: blur(130px);
-            border-radius: 50%;
-            right: -150px;
-            bottom: 100px;
-            z-index: -1;
-        }
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
 
+.card{
+    padding:30px;
 
-        /* =========================
-           NAVBAR
-        ========================= */
+    background:rgba(255,255,255,0.04);
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
+    border:1px solid rgba(255,255,255,0.08);
 
-            background: rgba(7, 7, 11, 0.85);
-            backdrop-filter: blur(15px);
+    border-radius:15px;
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
+    transition:0.3s;
+}
 
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#00e5ff;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
+.card h3{
+    color:#00e5ff;
+    margin-bottom:15px;
+}
 
-            padding: 18px 25px;
+.card p{
+    color:#aaa;
+}
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
+/* =========================
+   SERVICES
+========================= */
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-            color: #00eaff;
-        }
+.service{
+    padding:30px;
 
+    background:rgba(255,255,255,0.04);
 
-        .nav-links {
-            list-style: none;
+    border:1px solid rgba(255,255,255,0.08);
 
-            display: flex;
-            gap: 28px;
-        }
+    border-radius:15px;
 
+    transition:0.3s;
+}
 
-        .nav-links a {
-            color: #cfcfd7;
-            font-size: 15px;
+.service:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff;
+}
 
-            transition: 0.3s;
-        }
+.service-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
 
+.service h3{
+    margin-bottom:10px;
+}
 
-        .nav-links a:hover {
-            color: #00eaff;
-        }
+.service p{
+    color:#aaa;
+    font-size:14px;
+}
 
 
-        /* =========================
-           HERO
-        ========================= */
+/* =========================
+   SKILLS
+========================= */
 
-        .hero {
-            min-height: 100vh;
+.skills-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
 
-            padding: 130px 25px 80px;
+.skill{
+    margin-bottom:22px;
+}
 
-            display: flex;
-            align-items: center;
-        }
+.skill-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:7px;
+}
 
+.skill-info span:first-child{
+    font-weight:bold;
+}
 
-        .hero-container {
-            width: 100%;
-            max-width: 1200px;
+.skill-info span:last-child{
+    color:#00e5ff;
+}
 
-            margin: auto;
+.progress{
+    height:9px;
 
-            display: grid;
+    background:#151a2e;
 
-            grid-template-columns: 1.2fr 0.8fr;
+    border-radius:20px;
 
-            gap: 70px;
+    overflow:hidden;
+}
 
-            align-items: center;
-        }
+.progress-bar{
+    height:100%;
 
+    background:#00e5ff;
 
-        .hero-small {
-            color: #00eaff;
+    border-radius:20px;
+}
 
-            font-size: 17px;
 
-            font-weight: bold;
+/* =========================
+   EXPERIENCE
+========================= */
 
-            letter-spacing: 4px;
+.timeline{
+    max-width:850px;
+    margin:auto;
+}
 
-            margin-bottom: 15px;
-        }
+.timeline-item{
+    padding:25px 30px;
 
+    margin-bottom:22px;
 
-        .hero h1 {
-            font-size: clamp(45px, 6vw, 78px);
+    background:rgba(255,255,255,0.04);
 
-            line-height: 1.05;
+    border-left:3px solid #00e5ff;
 
-            margin-bottom: 25px;
-        }
+    border-radius:0 12px 12px 0;
 
+    transition:0.3s;
+}
 
-        .hero h1 span {
-            display: block;
+.timeline-item:hover{
+    transform:translateX(5px);
+}
 
-            color: #00eaff;
-        }
+.timeline-item h3{
+    color:#00e5ff;
+}
 
+.timeline-item h4{
+    margin:5px 0;
+}
 
-        .hero-description {
-            max-width: 650px;
+.timeline-item span{
+    color:#777;
+    font-size:14px;
+}
 
-            color: #a9a9b5;
+.timeline-item p{
+    color:#aaa;
+    margin-top:10px;
+}
 
-            font-size: 18px;
 
-            margin-bottom: 32px;
-        }
+/* =========================
+   EDUCATION
+========================= */
 
+.education-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
 
-        .hero-buttons {
-            display: flex;
+.education-card{
+    padding:30px;
 
-            flex-wrap: wrap;
+    background:rgba(255,255,255,0.04);
 
-            gap: 14px;
-        }
+    border:1px solid rgba(255,255,255,0.08);
 
+    border-radius:15px;
 
-        .btn {
-            display: inline-block;
+    transition:0.3s;
+}
 
-            padding: 13px 23px;
+.education-card:hover{
+    border-color:#00e5ff;
+    transform:translateY(-5px);
+}
 
-            border-radius: 8px;
+.education-card h3{
+    color:#00e5ff;
+    margin-bottom:12px;
+}
 
-            font-weight: bold;
+.education-card p{
+    color:#aaa;
+}
 
-            transition: 0.3s;
 
-            cursor: pointer;
-        }
+/* =========================
+   PROJECTS
+========================= */
 
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-        .btn-primary {
-            background: #00eaff;
+.project{
+    padding:30px;
 
-            color: #061014;
+    background:rgba(255,255,255,0.04);
 
-            border: 1px solid #00eaff;
-        }
+    border:1px solid rgba(255,255,255,0.08);
 
+    border-radius:15px;
 
-        .btn-primary:hover {
-            transform: translateY(-4px);
+    transition:0.3s;
+}
 
-            box-shadow:
-                0 0 25px rgba(0,234,255,0.4);
-        }
+.project:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff;
+}
 
+.project h3{
+    color:#00e5ff;
+    margin-bottom:12px;
+}
 
-        .btn-outline {
-            color: #00eaff;
+.project p{
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:20px;
+}
 
-            border: 1px solid #00eaff;
+.project-btn{
+    display:inline-block;
 
-            background: transparent;
-        }
+    padding:9px 15px;
 
+    border:1px solid #00e5ff;
 
-        .btn-outline:hover {
-            background: #00eaff;
+    border-radius:7px;
 
-            color: #061014;
+    color:#00e5ff;
 
-            transform: translateY(-4px);
-        }
+    font-size:13px;
+}
 
+.coming{
+    color:#ffc107;
+    font-size:12px;
+    font-weight:bold;
+}
 
-        /* =========================
-           PROFILE
-        ========================= */
 
-        .hero-image {
-            display: flex;
+/* =========================
+   CONTACT
+========================= */
 
-            justify-content: center;
-        }
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
 
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
 
-        .profile-wrapper {
-            position: relative;
-        }
+.contact-item{
+    padding:20px;
 
+    background:rgba(255,255,255,0.04);
 
-        .profile-box {
-            width: 330px;
+    border:1px solid rgba(255,255,255,0.08);
 
-            height: 400px;
+    border-radius:12px;
 
-            padding: 10px;
+    transition:0.3s;
+}
 
-            border-radius: 25px;
+.contact-item:hover{
+    border-color:#00e5ff;
+}
 
-            border: 2px solid #00eaff;
+.contact-item strong{
+    color:#00e5ff;
+}
 
-            background: #111118;
+.contact-item p{
+    color:#aaa;
+    margin-top:5px;
+}
 
-            box-shadow:
-                0 0 50px rgba(0,234,255,0.12);
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
 
-            animation: floating 4s ease-in-out infinite;
-        }
+input,
+textarea{
 
+    width:100%;
 
-        .profile-box img {
-            width: 100%;
+    padding:14px;
 
-            height: 100%;
+    background:#0b1022;
 
-            object-fit: cover;
+    border:1px solid rgba(255,255,255,0.1);
 
-            border-radius: 18px;
-        }
+    color:white;
 
+    border-radius:8px;
 
-        .profile-glow {
-            position: absolute;
+    outline:none;
 
-            width: 100%;
+    font-family:inherit;
+}
 
-            height: 100%;
+input:focus,
+textarea:focus{
+    border-color:#00e5ff;
+}
 
-            background: #00eaff;
+textarea{
+    height:150px;
+    resize:none;
+}
 
-            opacity: 0.15;
+button{
+    border:none;
+    cursor:pointer;
+}
 
-            filter: blur(80px);
 
-            z-index: -1;
-        }
+/* =========================
+   SOCIAL
+========================= */
 
+.socials{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
 
-        @keyframes floating {
+.social{
+    padding:10px 16px;
 
-            0% {
-                transform: translateY(0);
-            }
+    border:1px solid rgba(255,255,255,0.12);
 
-            50% {
-                transform: translateY(-12px);
-            }
+    border-radius:7px;
 
-            100% {
-                transform: translateY(0);
-            }
+    color:#aaa;
 
-        }
+    transition:0.3s;
+}
 
+.social:hover{
+    color:#00e5ff;
+    border-color:#00e5ff;
+}
 
-        /* =========================
-           SECTIONS
-        ========================= */
 
-        section {
-            padding: 100px 25px;
-        }
+/* =========================
+   FOOTER
+========================= */
 
+footer{
+    padding:30px 0;
 
-        .section-container {
-            max-width: 1200px;
+    border-top:1px solid rgba(255,255,255,0.08);
 
-            margin: auto;
-        }
+    text-align:center;
 
+    color:#777;
+}
 
-        .section-title {
-            text-align: center;
+footer p{
+    margin:5px 0;
+}
 
-            margin-bottom: 55px;
-        }
 
+/* =========================
+   WHATSAPP
+========================= */
 
-        .section-title h2 {
-            font-size: 42px;
+.whatsapp{
+    position:fixed;
 
-            margin-bottom: 8px;
-        }
+    right:25px;
+    bottom:25px;
 
+    width:56px;
+    height:56px;
 
-        .section-title h2 span {
-            color: #00eaff;
-        }
+    display:flex;
 
+    align-items:center;
+    justify-content:center;
 
-        .section-title p {
-            color: #888894;
-        }
+    border-radius:50%;
 
+    background:#25D366;
 
-        /* =========================
-           SERVICES
-        ========================= */
+    color:white;
 
-        .services-grid {
-            display: grid;
+    font-size:28px;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    box-shadow:0 5px 25px rgba(0,0,0,0.4);
 
-            gap: 22px;
-        }
+    z-index:999;
+}
 
 
-        .service-card {
-            padding: 32px;
+/* =========================
+   RESPONSIVE
+========================= */
 
-            background:
-                rgba(17,17,24,0.8);
+@media(max-width:900px){
 
-            border:
-                1px solid #252530;
+    .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-            border-radius: 16px;
+    .hero-text p{
+        margin-left:auto;
+        margin-right:auto;
+    }
 
-            transition: 0.3s;
-        }
+    .buttons{
+        justify-content:center;
+    }
 
+    .profile-box{
+        order:-1;
+    }
 
-        .service-card:hover {
-            transform: translateY(-8px);
+    .profile{
+        width:240px;
+        height:240px;
+    }
 
-            border-color: #00eaff;
+    .services-grid,
+    .projects-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-            box-shadow:
-                0 0 30px rgba(0,234,255,0.08);
-        }
+    .about-grid,
+    .contact-grid,
+    .education-grid,
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
 
+}
 
-        .service-icon {
-            font-size: 40px;
 
-            margin-bottom: 15px;
-        }
+@media(max-width:650px){
 
+    nav{
+        height:65px;
+    }
 
-        .service-card h3 {
-            font-size: 21px;
+    .nav-container{
+        height:65px;
+    }
 
-            margin-bottom: 10px;
-        }
+    .nav-links{
 
+        display:none;
 
-        .service-card p {
-            color: #92929d;
+        position:absolute;
 
-            font-size: 15px;
-        }
+        top:65px;
+        left:0;
 
+        width:100%;
 
-        /* =========================
-           PROJECTS
-        ========================= */
+        background:#080c1d;
 
-        .projects-grid {
-            display: grid;
+        flex-direction:column;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+        gap:0;
 
-            gap: 25px;
-        }
+        padding:15px 0;
 
+        text-align:center;
+    }
 
-        .project-card {
-            overflow: hidden;
+    .nav-links.active{
+        display:flex;
+    }
 
-            background: #111118;
+    .nav-links li{
+        padding:12px;
+    }
 
-            border:
-                1px solid #252530;
+    .menu-btn{
+        display:block;
+    }
 
-            border-radius: 17px;
+    .hero-text h1{
+        font-size:43px;
+    }
 
-            transition: 0.3s;
-        }
+    .hero-text h2{
+        font-size:18px;
+    }
 
+    .section-title h2{
+        font-size:32px;
+    }
 
-        .project-card:hover {
-            transform: translateY(-8px);
+    .services-grid,
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
 
-            border-color: #00eaff;
+    section{
+        padding:75px 0;
+    }
 
-            box-shadow:
-                0 0 30px rgba(0,234,255,0.08);
-        }
+    .whatsapp{
+        right:18px;
+        bottom:18px;
+    }
 
+}
 
-        .project-top {
-            height: 160px;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            font-size: 60px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #10151c,
-                    #171522
-                );
-        }
-
-
-        .project-content {
-            padding: 27px;
-        }
-
-
-        .project-content h3 {
-            font-size: 22px;
-
-            margin-bottom: 10px;
-        }
-
-
-        .project-content p {
-            color: #92929d;
-
-            font-size: 14px;
-
-            margin-bottom: 17px;
-        }
-
-
-        .tags {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 7px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .tag {
-            padding: 5px 9px;
-
-            background: #1a252c;
-
-            color: #00eaff;
-
-            border-radius: 5px;
-
-            font-size: 11px;
-        }
-
-
-        .project-button {
-            display: inline-block;
-
-            padding: 9px 17px;
-
-            color: #00eaff;
-
-            border:
-                1px solid #00eaff;
-
-            border-radius: 6px;
-
-            font-size: 13px;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-
-        .project-button:hover {
-            background: #00eaff;
-
-            color: #061014;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-box {
-            max-width: 950px;
-
-            margin: auto;
-
-            padding: 45px;
-
-            text-align: center;
-
-            background:
-                rgba(17,17,24,0.8);
-
-            border:
-                1px solid #252530;
-
-            border-radius: 18px;
-        }
-
-
-        .about-box p {
-            color: #b5b5bf;
-
-            font-size: 17px;
-
-            margin-bottom: 18px;
-        }
-
-
-        .about-box p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-wrapper {
-            max-width: 800px;
-
-            margin: auto;
-        }
-
-
-        .contact-form {
-            padding: 38px;
-
-            background: #111118;
-
-            border:
-                1px solid #252530;
-
-            border-radius: 18px;
-        }
-
-
-        .input-group {
-            margin-bottom: 19px;
-        }
-
-
-        .input-group label {
-            display: block;
-
-            color: #ddddE5;
-
-            margin-bottom: 7px;
-
-            font-size: 14px;
-        }
-
-
-        .input-group input,
-        .input-group textarea {
-            width: 100%;
-
-            padding: 14px;
-
-            background: #08080d;
-
-            border:
-                1px solid #292934;
-
-            color: #ffffff;
-
-            border-radius: 7px;
-
-            outline: none;
-
-            font-size: 15px;
-
-            transition: 0.3s;
-        }
-
-
-        .input-group input:focus,
-        .input-group textarea:focus {
-            border-color: #00eaff;
-
-            box-shadow:
-                0 0 10px rgba(0,234,255,0.08);
-        }
-
-
-        .input-group textarea {
-            height: 150px;
-
-            resize: vertical;
-        }
-
-
-        .submit-btn {
-            width: 100%;
-
-            padding: 14px;
-
-            background: #00eaff;
-
-            color: #061014;
-
-            border: none;
-
-            border-radius: 7px;
-
-            font-size: 16px;
-
-            font-weight: bold;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-        }
-
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 0 25px rgba(0,234,255,0.3);
-        }
-
-
-        /* =========================
-           CONTACT INFO
-        ========================= */
-
-        .contact-info {
-            margin-top: 30px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 15px;
-        }
-
-
-        .contact-card {
-            padding: 20px;
-
-            text-align: center;
-
-            background: #111118;
-
-            border:
-                1px solid #252530;
-
-            border-radius: 12px;
-
-            transition: 0.3s;
-        }
-
-
-        .contact-card:hover {
-            border-color: #00eaff;
-        }
-
-
-        .contact-card-icon {
-            font-size: 27px;
-
-            margin-bottom: 8px;
-        }
-
-
-        .contact-card h4 {
-            margin-bottom: 5px;
-        }
-
-
-        .contact-card a {
-            color: #92929d;
-
-            font-size: 13px;
-
-            word-break: break-word;
-        }
-
-
-        .contact-card a:hover {
-            color: #00eaff;
-        }
-
-
-        /* =========================
-           SOCIAL
-        ========================= */
-
-        .social-links {
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
-
-            margin-top: 30px;
-        }
-
-
-        .social-btn {
-            padding: 11px 19px;
-
-            border:
-                1px solid #30303b;
-
-            border-radius: 8px;
-
-            color: #ddd;
-
-            transition: 0.3s;
-        }
-
-
-        .social-btn:hover {
-            color: #00eaff;
-
-            border-color: #00eaff;
-
-            transform: translateY(-3px);
-        }
-
-
-        /* =========================
-           WHATSAPP
-        ========================= */
-
-        .whatsapp {
-            position: fixed;
-
-            right: 22px;
-
-            bottom: 22px;
-
-            width: 60px;
-
-            height: 60px;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            background: #25D366;
-
-            color: white;
-
-            font-size: 29px;
-
-            z-index: 999;
-
-            box-shadow:
-                0 5px 25px rgba(0,0,0,0.5);
-
-            transition: 0.3s;
-        }
-
-
-        .whatsapp:hover {
-            transform: scale(1.12);
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding: 35px 20px;
-
-            text-align: center;
-
-            border-top:
-                1px solid #24242e;
-
-            color: #777783;
-        }
-
-
-        footer span {
-            color: #00eaff;
-        }
-
-
-        footer p {
-            margin: 4px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 950px) {
-
-            .hero-container {
-                grid-template-columns: 1fr;
-
-                text-align: center;
-            }
-
-
-            .hero-description {
-                margin-left: auto;
-
-                margin-right: auto;
-            }
-
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-
-            .hero-image {
-                order: -1;
-            }
-
-
-            .services-grid,
-            .projects-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .contact-info {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 650px) {
-
-            .nav-container {
-                padding: 15px;
-            }
-
-
-            .logo {
-                font-size: 18px;
-            }
-
-
-            .nav-links {
-                gap: 10px;
-            }
-
-
-            .nav-links a {
-                font-size: 11px;
-            }
-
-
-            section {
-                padding: 75px 18px;
-            }
-
-
-            .hero {
-                padding:
-                    120px 18px 70px;
-            }
-
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-
-            .profile-box {
-                width: 270px;
-
-                height: 330px;
-            }
-
-
-            .services-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-
-            .contact-info {
-                grid-template-columns: 1fr;
-            }
-
-
-            .about-box,
-            .contact-form {
-                padding: 25px;
-            }
-
-
-            .section-title h2 {
-                font-size: 34px;
-            }
-
-
-            .whatsapp {
-                right: 15px;
-
-                bottom: 15px;
-
-                width: 55px;
-
-                height: 55px;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1033,880 +808,1069 @@
 <body>
 
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <nav>
+<nav>
 
-        <div class="nav-container">
+<div class="nav-container">
 
-            <a href="#home" class="logo">
-                AWAIS.DEV
-            </a>
+<div class="logo">
+Muhammad <span>Awais</span>
+</div>
 
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
 
-            <ul class="nav-links">
+<ul class="nav-links" id="navLinks">
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+<li>
+<a href="#home">Home</a>
+</li>
 
-                <li>
-                    <a href="#services">Services</a>
-                </li>
+<li>
+<a href="#about">About</a>
+</li>
 
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
+<li>
+<a href="#services">Services</a>
+</li>
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+<li>
+<a href="#skills">Skills</a>
+</li>
 
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+<li>
+<a href="#experience">Experience</a>
+</li>
 
-            </ul>
+<li>
+<a href="#education">Education</a>
+</li>
 
-        </div>
+<li>
+<a href="#projects">Projects</a>
+</li>
 
-    </nav>
+<li>
+<a href="#contact">Contact</a>
+</li>
 
+</ul>
 
+</div>
 
-    <!-- =========================
-         HERO
-    ========================= -->
+</nav>
 
-    <section class="hero" id="home">
 
-        <div class="hero-container">
 
+<!-- =========================
+     HERO
+========================= -->
 
-            <div>
+<section class="hero" id="home">
 
-                <div class="hero-small">
-                    HELLO, I'M
-                </div>
+<div class="container">
 
+<div class="hero-content">
 
-                <h1>
 
-                    Muhammad Awais
+<div class="hero-text">
 
-                    <span>
-                        Khan Abbasi
-                    </span>
+<small>
+HELLO, I'M
+</small>
 
-                </h1>
+<h1>
+Muhammad <span>Awais</span><br>
+Khan Abbasi
+</h1>
 
+<h2>
+Web Developer • Software Developer • AI Assistant Developer
+</h2>
 
-                <p class="hero-description">
+<p>
+I build modern, responsive and user-friendly digital experiences.
+I also work with software development, computer operations and
+AI assistant projects.
+</p>
 
-                    Web Developer, Software Developer and
-                    AI Assistant Developer. I build modern,
-                    responsive and user-friendly digital
-                    experiences.
+<div class="buttons">
 
-                </p>
+<a
+href="#projects"
+class="btn btn-primary">
+🚀 View My Projects
+</a>
 
+<a
+href="cv.pdf"
+class="btn btn-secondary"
+download>
+📄 Download CV
+</a>
 
-                <div class="hero-buttons">
+<a
+href="#contact"
+class="btn btn-secondary">
+📩 Contact Me
+</a>
 
-                    <a
-                        href="#projects"
-                        class="btn btn-primary">
+</div>
 
-                        🚀 View My Projects
+</div>
 
-                    </a>
 
+<div class="profile-box">
 
-                    <a
-                        href="cv.pdf"
-                        download
-                        class="btn btn-outline">
+<img
+src="profile.jpg"
+class="profile"
+alt="Muhammad Awais Khan Abbasi">
 
-                        📄 Download CV
+</div>
 
-                    </a>
 
+</div>
 
-                    <a
-                        href="#contact"
-                        class="btn btn-outline">
+</div>
 
-                        📩 Contact Me
+</section>
 
-                    </a>
 
-                </div>
 
-            </div>
+<!-- =========================
+     ABOUT
+========================= -->
 
+<section id="about">
 
+<div class="container">
 
-            <div class="hero-image">
+<div class="section-title">
 
-                <div class="profile-wrapper">
+<small>
+WHO I AM
+</small>
 
-                    <div class="profile-glow"></div>
+<h2>
+About Me
+</h2>
 
-                    <div class="profile-box">
+</div>
 
-                        <img
-                            src="profile.jpg"
-                            alt="Muhammad Awais Khan Abbasi">
 
-                    </div>
+<div class="about-grid">
 
-                </div>
 
-            </div>
+<div class="card">
 
+<h3>
+👨‍💻 Developer
+</h3>
 
-        </div>
+<p>
+I am a Software Engineering student interested in web development,
+software development, artificial intelligence and modern technology.
+I enjoy creating practical digital solutions and learning new technologies.
+</p>
 
-    </section>
+</div>
 
 
+<div class="card">
 
-    <!-- =========================
-         SERVICES
-    ========================= -->
+<h3>
+🎯 My Goal
+</h3>
 
-    <section id="services">
+<p>
+My goal is to become a professional software developer and build
+high-quality websites, applications and intelligent AI-based systems
+that solve real-world problems.
+</p>
 
-        <div class="section-container">
+</div>
 
 
-            <div class="section-title">
+</div>
 
-                <h2>
-                    My <span>Services</span>
-                </h2>
+</div>
 
-                <p>
-                    Professional digital solutions
-                </p>
+</section>
 
-            </div>
 
 
+<!-- =========================
+     SERVICES
+========================= -->
 
-            <div class="services-grid">
+<section id="services">
 
+<div class="container">
 
-                <div class="service-card">
+<div class="section-title">
 
-                    <div class="service-icon">
-                        🌐
-                    </div>
+<small>
+WHAT I DO
+</small>
 
-                    <h3>
-                        Web Development
-                    </h3>
+<h2>
+My Services
+</h2>
 
-                    <p>
-                        Modern, responsive and
-                        professional websites using
-                        HTML, CSS and JavaScript.
-                    </p>
+</div>
 
-                </div>
 
+<div class="services-grid">
 
 
-                <div class="service-card">
+<div class="service">
 
-                    <div class="service-icon">
-                        💻
-                    </div>
+<div class="service-icon">
+🌐
+</div>
 
-                    <h3>
-                        Software Development
-                    </h3>
+<h3>
+Web Development
+</h3>
 
-                    <p>
-                        Custom software solutions
-                        designed according to business
-                        and user requirements.
-                    </p>
+<p>
+Modern, responsive and user-friendly websites for businesses,
+personal brands and projects.
+</p>
 
-                </div>
+</div>
 
 
+<div class="service">
 
-                <div class="service-card">
+<div class="service-icon">
+💻
+</div>
 
-                    <div class="service-icon">
-                        🤖
-                    </div>
+<h3>
+Software Development
+</h3>
 
-                    <h3>
-                        AI Assistant
-                    </h3>
+<p>
+Development of useful software solutions and desktop-based applications.
+</p>
 
-                    <p>
-                        Intelligent assistant systems
-                        using Python, Flask, automation
-                        and voice interaction.
-                    </p>
+</div>
 
-                </div>
 
+<div class="service">
 
+<div class="service-icon">
+🤖
+</div>
 
-                <div class="service-card">
+<h3>
+AI Assistant
+</h3>
 
-                    <div class="service-icon">
-                        🎨
-                    </div>
+<p>
+Development of AI assistant systems with voice interaction,
+automation and smart commands.
+</p>
 
-                    <h3>
-                        UI / UX Design
-                    </h3>
+</div>
 
-                    <p>
-                        Clean, modern and attractive
-                        interfaces focused on usability
-                        and user experience.
-                    </p>
 
-                </div>
+<div class="service">
 
+<div class="service-icon">
+🎨
+</div>
 
+<h3>
+UI / UX Design
+</h3>
 
-                <div class="service-card">
+<p>
+Clean, modern and attractive interfaces designed for better user experience.
+</p>
 
-                    <div class="service-icon">
-                        📱
-                    </div>
+</div>
 
-                    <h3>
-                        Responsive Design
-                    </h3>
 
-                    <p>
-                        Websites optimized for mobile,
-                        tablet and desktop devices.
-                    </p>
+<div class="service">
 
-                </div>
+<div class="service-icon">
+📱
+</div>
 
+<h3>
+Responsive Design
+</h3>
 
+<p>
+Websites that work smoothly on mobile phones, tablets and computers.
+</p>
 
-                <div class="service-card">
+</div>
 
-                    <div class="service-icon">
-                        🔧
-                    </div>
 
-                    <h3>
-                        Website Maintenance
-                    </h3>
+<div class="service">
 
-                    <p>
-                        Website updates, bug fixing,
-                        improvements and technical
-                        support.
-                    </p>
+<div class="service-icon">
+🔧
+</div>
 
-                </div>
+<h3>
+Website Maintenance
+</h3>
 
+<p>
+Website updates, content changes, bug fixing and basic improvements.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </section>
+</div>
 
+</div>
 
+</section>
 
-    <!-- =========================
-         PROJECTS
-    ========================= -->
 
-    <section id="projects">
 
-        <div class="section-container">
+<!-- =========================
+     SKILLS
+========================= -->
 
+<section id="skills">
 
-            <div class="section-title">
+<div class="container">
 
-                <h2>
-                    My <span>Projects</span>
-                </h2>
+<div class="section-title">
 
-                <p>
-                    Projects I have built and I'm working on
-                </p>
+<small>
+MY ABILITIES
+</small>
 
-            </div>
+<h2>
+Skills
+</h2>
 
+</div>
 
 
-            <div class="projects-grid">
+<div class="skills-grid">
 
 
-                <!-- ABBASI COLLECTION -->
+<div>
 
-                <div class="project-card">
 
-                    <div class="project-top">
-                        🛍️
-                    </div>
+<div class="skill">
 
+<div class="skill-info">
 
-                    <div class="project-content">
+<span>HTML</span>
+<span>90%</span>
 
-                        <h3>
-                            Abbasi Collection
-                        </h3>
+</div>
 
+<div class="progress">
 
-                        <p>
-                            An e-commerce website concept
-                            for clothing, perfumes, shoes
-                            and mobile products.
-                        </p>
+<div
+class="progress-bar"
+style="width:90%">
+</div>
 
+</div>
 
-                        <div class="tags">
+</div>
 
-                            <span class="tag">
-                                HTML
-                            </span>
 
-                            <span class="tag">
-                                CSS
-                            </span>
+<div class="skill">
 
-                            <span class="tag">
-                                JavaScript
-                            </span>
+<div class="skill-info">
 
-                            <span class="tag">
-                                E-Commerce
-                            </span>
+<span>CSS</span>
+<span>85%</span>
 
-                        </div>
+</div>
 
+<div class="progress">
 
-                        <a
-                            href="#"
-                            onclick="comingSoon(event)"
-                            class="project-button">
+<div
+class="progress-bar"
+style="width:85%">
+</div>
 
-                            Coming Soon
+</div>
 
-                        </a>
+</div>
 
-                    </div>
 
-                </div>
+<div class="skill">
 
+<div class="skill-info">
 
+<span>JavaScript</span>
+<span>75%</span>
 
-                <!-- MUSKAN -->
+</div>
 
-                <div class="project-card">
+<div class="progress">
 
-                    <div class="project-top">
-                        🤖
-                    </div>
+<div
+class="progress-bar"
+style="width:75%">
+</div>
 
+</div>
 
-                    <div class="project-content">
+</div>
 
-                        <h3>
-                            Muskan AI Assistant
-                        </h3>
 
+<div class="skill">
 
-                        <p>
-                            Personal AI assistant with
-                            voice interaction, Python,
-                            Flask and automation.
-                        </p>
+<div class="skill-info">
 
+<span>Python</span>
+<span>80%</span>
 
-                        <div class="tags">
+</div>
 
-                            <span class="tag">
-                                Python
-                            </span>
+<div class="progress">
 
-                            <span class="tag">
-                                Flask
-                            </span>
+<div
+class="progress-bar"
+style="width:80%">
+</div>
 
-                            <span class="tag">
-                                AI
-                            </span>
+</div>
 
-                            <span class="tag">
-                                Voice
-                            </span>
+</div>
 
-                        </div>
 
+</div>
 
-                        <a
-                            href="#"
-                            onclick="comingSoon(event)"
-                            class="project-button">
 
-                            Coming Soon
+<div>
 
-                        </a>
 
-                    </div>
+<div class="skill">
 
-                </div>
+<div class="skill-info">
 
+<span>Flask</span>
+<span>75%</span>
 
+</div>
 
-                <!-- PORTFOLIO -->
+<div class="progress">
 
-                <div class="project-card">
+<div
+class="progress-bar"
+style="width:75%">
+</div>
 
-                    <div class="project-top">
-                        🚀
-                    </div>
+</div>
 
+</div>
 
-                    <div class="project-content">
 
-                        <h3>
-                            Portfolio Website
-                        </h3>
+<div class="skill">
 
+<div class="skill-info">
 
-                        <p>
-                            My personal developer portfolio
-                            built using HTML, CSS and JavaScript
-                            and deployed online.
-                        </p>
+<span>MS Office</span>
+<span>90%</span>
 
+</div>
 
-                        <div class="tags">
+<div class="progress">
 
-                            <span class="tag">
-                                HTML
-                            </span>
+<div
+class="progress-bar"
+style="width:90%">
+</div>
 
-                            <span class="tag">
-                                CSS
-                            </span>
+</div>
 
-                            <span class="tag">
-                                JavaScript
-                            </span>
+</div>
 
-                            <span class="tag">
-                                GitHub Pages
-                            </span>
 
-                        </div>
+<div class="skill">
 
+<div class="skill-info">
 
-                        <a
-                            href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
-                            target="_blank"
-                            class="project-button">
+<span>Computer Operations</span>
+<span>90%</span>
 
-                            View Project
+</div>
 
-                        </a>
+<div class="progress">
 
-                    </div>
+<div
+class="progress-bar"
+style="width:90%">
+</div>
 
-                </div>
+</div>
 
+</div>
 
-            </div>
 
-        </div>
+<div class="skill">
 
-    </section>
+<div class="skill-info">
 
+<span>Data Entry</span>
+<span>90%</span>
 
+</div>
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+<div class="progress">
 
-    <section id="about">
+<div
+class="progress-bar"
+style="width:90%">
+</div>
 
-        <div class="section-container">
+</div>
 
+</div>
 
-            <div class="section-title">
 
-                <h2>
-                    About <span>Me</span>
-                </h2>
+</div>
 
-            </div>
+</div>
 
+</div>
 
+</section>
 
-            <div class="about-box">
 
-                <p>
-                    I am Muhammad Awais Khan Abbasi,
-                    a developer interested in web
-                    development, software development
-                    and artificial intelligence.
-                </p>
 
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
-                <p>
-                    I enjoy creating practical digital
-                    solutions, modern websites and
-                    intelligent assistant systems.
-                </p>
+<section id="experience">
 
+<div class="container">
 
-                <p>
-                    My goal is to keep learning new
-                    technologies and build useful
-                    products that solve real-world
-                    problems.
-                </p>
+<div class="section-title">
 
-            </div>
+<small>
+MY JOURNEY
+</small>
 
-        </div>
+<h2>
+Work Experience
+</h2>
 
-    </section>
+</div>
 
 
+<div class="timeline">
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
 
-    <section id="contact">
+<div class="timeline-item">
 
-        <div class="section-container">
+<h3>
+Hotel Staff / Waiter
+</h3>
 
+<h4>
+Lasani Pizza Hotel — Sukkur, Sindh
+</h4>
 
-            <div class="section-title">
+<span>
+1 Year Experience
+</span>
 
-                <h2>
-                    Contact <span>Me</span>
-                </h2>
+<p>
+Customer dealing, guest assistance, taking and serving orders,
+workplace organization and supporting daily hotel operations.
+</p>
 
-                <p>
-                    Let's work together
-                </p>
+</div>
 
-            </div>
 
+<div class="timeline-item">
 
+<h3>
+Computer Operator
+</h3>
 
-            <div class="contact-wrapper">
+<h4>
+Cola Next — Sukkur, Sindh
+</h4>
 
+<span>
+3 Years Experience
+</span>
 
-                <form
-                    class="contact-form"
-                    onsubmit="sendMessage(event)">
+<p>
+MS Word, Excel, PowerPoint, data entry, typing, printing,
+scanning, record management and general office support.
+</p>
 
+</div>
 
-                    <div class="input-group">
 
-                        <label for="name">
-                            Your Name
-                        </label>
+</div>
 
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="Enter your name"
-                            required>
+</div>
 
-                    </div>
+</section>
 
 
 
-                    <div class="input-group">
+<!-- =========================
+     EDUCATION
+========================= -->
 
-                        <label for="email">
-                            Your Email
-                        </label>
+<section id="education">
 
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Enter your email"
-                            required>
+<div class="container">
 
-                    </div>
+<div class="section-title">
 
+<small>
+MY QUALIFICATION
+</small>
 
+<h2>
+Education
+</h2>
 
-                    <div class="input-group">
+</div>
 
-                        <label for="message">
-                            Your Message
-                        </label>
 
-                        <textarea
-                            id="message"
-                            placeholder="Write your message..."
-                            required></textarea>
+<div class="education-grid">
 
-                    </div>
 
+<div class="education-card">
 
+<h3>
+🎓 BS Software Engineering
+</h3>
 
-                    <button
-                        type="submit"
-                        class="submit-btn">
+<p>
+NFC Institute of Engineering & Technology, Multan
+</p>
 
-                        💬 Send Message on WhatsApp
+<br>
 
-                    </button>
+<p>
+Currently studying Software Engineering with interest in
+software development, web technologies and artificial intelligence.
+</p>
 
+</div>
 
-                </form>
 
+<div class="education-card">
 
+<h3>
+💻 Technical Learning
+</h3>
 
-                <!-- CONTACT CARDS -->
+<p>
+HTML • CSS • JavaScript • Python • Flask
+</p>
 
-                <div class="contact-info">
+<br>
 
+<p>
+Continuously learning modern programming technologies and
+building practical software projects.
+</p>
 
-                    <div class="contact-card">
+</div>
 
-                        <div class="contact-card-icon">
-                            📧
-                        </div>
 
-                        <h4>
-                            Email
-                        </h4>
+</div>
 
-                        <a
-                            href="mailto:awaiskhanabbasiabbasi@gmail.com">
+</div>
 
-                            awaiskhanabbasiabbasi@gmail.com
+</section>
 
-                        </a>
 
-                    </div>
 
+<!-- =========================
+     PROJECTS
+========================= -->
 
+<section id="projects">
 
-                    <div class="contact-card">
+<div class="container">
 
-                        <div class="contact-card-icon">
-                            💬
-                        </div>
+<div class="section-title">
 
-                        <h4>
-                            WhatsApp
-                        </h4>
+<small>
+MY WORK
+</small>
 
-                        <a
-                            href="https://wa.me/923148160348"
-                            target="_blank">
+<h2>
+Projects
+</h2>
 
-                            +92 314 8160348
+</div>
 
-                        </a>
 
-                    </div>
+<div class="projects-grid">
 
 
+<div class="project">
 
-                    <div class="contact-card">
+<h3>
+🛍️ Abbasi Collection
+</h3>
 
-                        <div class="contact-card-icon">
-                            🐙
-                        </div>
+<p>
+A modern e-commerce website concept for clothing,
+perfumes, shoes and other products.
+</p>
 
-                        <h4>
-                            GitHub
-                        </h4>
+<span class="coming">
+COMING SOON
+</span>
 
-                        <a
-                            href="https://github.com/MuhammadAwaisKhanAbbasi"
-                            target="_blank">
+</div>
 
-                            View GitHub Profile
 
-                        </a>
+<div class="project">
 
-                    </div>
+<h3>
+🤖 Muskan AI Assistant
+</h3>
 
+<p>
+A personal AI assistant project with voice interaction,
+smart commands and automation features.
+</p>
 
-                </div>
+<span class="coming">
+COMING SOON
+</span>
 
+</div>
 
 
-                <!-- SOCIAL BUTTONS -->
+<div class="project">
 
-                <div class="social-links">
+<h3>
+💼 Portfolio Website
+</h3>
 
+<p>
+My personal developer portfolio built with modern HTML,
+CSS and responsive design.
+</p>
 
-                    <a
-                        href="https://github.com/MuhammadAwaisKhanAbbasi"
-                        target="_blank"
-                        class="social-btn">
+<a
+href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
+target="_blank"
+class="project-btn">
+View Project →
+</a>
 
-                        🐙 GitHub
+</div>
 
-                    </a>
 
+</div>
 
-                    <a
-                        href="https://wa.me/923148160348"
-                        target="_blank"
-                        class="social-btn">
+</div>
 
-                        💬 WhatsApp
+</section>
 
-                    </a>
 
 
-                    <a
-                        href="mailto:awaiskhanabbasiabbasi@gmail.com"
-                        class="social-btn">
+<!-- =========================
+     CONTACT
+========================= -->
 
-                        ✉️ Email
+<section id="contact">
 
-                    </a>
+<div class="container">
 
+<div class="section-title">
 
-                </div>
+<small>
+GET IN TOUCH
+</small>
 
+<h2>
+Contact Me
+</h2>
 
-            </div>
+</div>
 
-        </div>
 
-    </section>
+<div class="contact-grid">
 
 
+<div>
 
-    <!-- =========================
-         FLOATING WHATSAPP
-    ========================= -->
 
-    <a
-        href="https://wa.me/923148160348"
-        target="_blank"
-        class="whatsapp"
-        aria-label="WhatsApp">
+<div class="contact-info">
 
-        💬
 
-    </a>
+<div class="contact-item">
 
+<strong>
+📞 Phone / WhatsApp
+</strong>
 
+<p>
+03148160348
+</p>
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+</div>
 
-    <footer>
 
-        <p>
+<div class="contact-item">
 
-            © 2026
+<strong>
+✉️ Email
+</strong>
 
-            <span>
-                Muhammad Awais Khan Abbasi
-            </span>
+<p>
+awaiskhanabbasiabbasi@gmail.com
+</p>
 
-            — All Rights Reserved.
+</div>
 
-        </p>
 
+<div class="contact-item">
 
-        <p>
-            Built with HTML, CSS & JavaScript.
-        </p>
+<strong>
+📍 Location
+</strong>
 
-    </footer>
+<p>
+Multan, Punjab, Pakistan
+</p>
 
+</div>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
+<div class="contact-item">
 
-    <script>
+<strong>
+💼 Availability
+</strong>
 
+<p>
+Full-Time / Part-Time
+</p>
 
-        /* =========================
-           CONTACT → WHATSAPP
-        ========================= */
+</div>
 
-        function sendMessage(event) {
 
-            event.preventDefault();
+</div>
 
 
-            const name =
-                document.getElementById("name").value;
+<div class="socials">
 
+<a
+href="https://github.com/MuhammadAwaisKhanAbbasi"
+target="_blank"
+class="social">
+GitHub
+</a>
 
-            const email =
-                document.getElementById("email").value;
+<a
+href="mailto:awaiskhanabbasiabbasi@gmail.com"
+class="social">
+Email
+</a>
 
+<a
+href="https://wa.me/923148160348"
+target="_blank"
+class="social">
+WhatsApp
+</a>
 
-            const message =
-                document.getElementById("message").value;
+</div>
 
 
-            const text =
-                "Hello Muhammad Awais Khan Abbasi!" +
-                "\n\n" +
-                "Name: " + name +
-                "\n" +
-                "Email: " + email +
-                "\n\n" +
-                "Message: " + message;
+</div>
 
 
-            const url =
-                "https://wa.me/923148160348?text=" +
-                encodeURIComponent(text);
 
+<div class="card">
 
-            window.open(
-                url,
-                "_blank"
-            );
+<form onsubmit="sendMessage(event)">
+
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required>
+
+
+<textarea
+id="message"
+placeholder="Your Message"
+required>
+</textarea>
+
+
+<button
+type="submit"
+class="btn btn-primary">
+
+💬 Send Message on WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 Muhammad Awais Khan Abbasi. All Rights Reserved.
+</p>
+
+<p>
+Built with ❤️ using HTML, CSS & JavaScript
+</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     WHATSAPP BUTTON
+========================= -->
+
+<a
+href="https://wa.me/923148160348"
+target="_blank"
+class="whatsapp"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById("name").value;
+
+
+    const email =
+    document.getElementById("email").value;
+
+
+    const message =
+    document.getElementById("message").value;
+
+
+    const text =
+    "Hello Muhammad Awais,%0A%0A" +
+
+    "Name: " +
+    encodeURIComponent(name) +
+
+    "%0AEmail: " +
+    encodeURIComponent(email) +
+
+    "%0A%0AMessage:%0A" +
+
+    encodeURIComponent(message);
+
+
+    const whatsapp =
+    "https://wa.me/923148160348?text=" +
+    text;
+
+
+    window.open(
+        whatsapp,
+        "_blank"
+    );
+
+}
+
+
+/* Close mobile menu after clicking */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("navLinks")
+            .classList
+            .remove("active");
 
         }
+    );
+
+});
 
 
-
-        /* =========================
-           COMING SOON
-        ========================= */
-
-        function comingSoon(event) {
-
-            event.preventDefault();
-
-
-            alert(
-                "🚀 This project is currently under development.\n\nComing Soon!"
-            );
-
-        }
-
-
-    </script>
+</script>
 
 
 </body>
