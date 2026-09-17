@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Muhammad Awais Khan Abbasi | Portfolio</title>
 
 <style>
+
 :root{
     --bg:#050816;
     --bg2:#090d20;
@@ -57,6 +59,12 @@ a{
     text-decoration:none;
 }
 
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
 .container{
     width:min(1150px,92%);
     margin:auto;
@@ -90,7 +98,7 @@ section{
     line-height:1.7;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
 .navbar{
     position:fixed;
@@ -141,7 +149,7 @@ section{
     cursor:pointer;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
@@ -186,7 +194,12 @@ section{
 }
 
 .gradient-text{
-    background:linear-gradient(90deg,var(--purple),var(--blue),var(--pink));
+    background:linear-gradient(
+        90deg,
+        var(--purple),
+        var(--blue),
+        var(--pink)
+    );
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
@@ -206,7 +219,9 @@ section{
 }
 
 @keyframes blink{
-    50%{opacity:0}
+    50%{
+        opacity:0;
+    }
 }
 
 .hero p{
@@ -234,7 +249,11 @@ section{
 }
 
 .btn-primary{
-    background:linear-gradient(135deg,var(--purple),#4e8cff);
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        #4e8cff
+    );
     box-shadow:0 10px 30px rgba(124,92,255,.25);
 }
 
@@ -258,7 +277,12 @@ section{
     height:350px;
     padding:7px;
     border-radius:50%;
-    background:linear-gradient(135deg,var(--purple),var(--blue),var(--pink));
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        var(--blue),
+        var(--pink)
+    );
     box-shadow:
         0 0 60px rgba(124,92,255,.28),
         0 0 100px rgba(0,229,255,.12);
@@ -274,7 +298,9 @@ section{
 }
 
 @keyframes float{
-    50%{transform:translateY(-14px)}
+    50%{
+        transform:translateY(-14px);
+    }
 }
 
 .float-card{
@@ -298,7 +324,7 @@ section{
     bottom:25px;
 }
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats{
     margin-top:55px;
@@ -324,7 +350,7 @@ section{
     color:var(--muted);
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about-grid{
     display:grid;
@@ -413,7 +439,7 @@ section{
     font-size:14px;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services-grid{
     display:grid;
@@ -446,7 +472,7 @@ section{
     line-height:1.7;
 }
 
-/* SKILLS */
+/* ================= SKILLS ================= */
 
 .skills-grid{
     display:grid;
@@ -479,10 +505,14 @@ section{
     display:block;
     height:100%;
     border-radius:10px;
-    background:linear-gradient(90deg,var(--purple),var(--blue));
+    background:linear-gradient(
+        90deg,
+        var(--purple),
+        var(--blue)
+    );
 }
 
-/* EXPERIENCE */
+/* ================= EXPERIENCE ================= */
 
 .timeline{
     max-width:850px;
@@ -497,7 +527,10 @@ section{
     top:0;
     bottom:0;
     width:2px;
-    background:linear-gradient(var(--purple),var(--blue));
+    background:linear-gradient(
+        var(--purple),
+        var(--blue)
+    );
 }
 
 .timeline-item{
@@ -538,7 +571,7 @@ section{
     color:var(--muted);
 }
 
-/* EDUCATION */
+/* ================= EDUCATION ================= */
 
 .edu-card{
     max-width:850px;
@@ -555,7 +588,11 @@ section{
     display:grid;
     place-items:center;
     border-radius:18px;
-    background:linear-gradient(135deg,var(--purple),var(--blue));
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        var(--blue)
+    );
     font-size:30px;
     flex-shrink:0;
 }
@@ -565,9 +602,7 @@ section{
     margin-top:8px;
 }
 
-/* ============================= */
-/* PREMIUM PROJECT SHOWCASE */
-/* ============================= */
+/* ================= PROJECTS ================= */
 
 .projects-grid{
     display:grid;
@@ -610,16 +645,22 @@ section{
         0 0 30px rgba(124,92,255,.08);
 }
 
-/* browser preview */
-
 .project-preview{
     height:205px;
     padding:14px;
     position:relative;
     overflow:hidden;
     background:
-        radial-gradient(circle at 70% 30%,rgba(0,229,255,.16),transparent 30%),
-        radial-gradient(circle at 25% 70%,rgba(124,92,255,.20),transparent 35%),
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(0,229,255,.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 25% 70%,
+            rgba(124,92,255,.20),
+            transparent 35%
+        ),
         #080b18;
     border-bottom:1px solid var(--border);
 }
@@ -658,7 +699,11 @@ section{
     width:70px;
     height:8px;
     border-radius:5px;
-    background:linear-gradient(90deg,var(--purple),var(--blue));
+    background:linear-gradient(
+        90deg,
+        var(--purple),
+        var(--blue)
+    );
     margin-bottom:18px;
 }
 
@@ -699,8 +744,6 @@ section{
     );
     border:1px solid rgba(255,255,255,.08);
 }
-
-/* project content */
 
 .project-content{
     padding:25px;
@@ -792,7 +835,11 @@ section{
 }
 
 .project-btn.live{
-    background:linear-gradient(135deg,var(--purple),#4e8cff);
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        #4e8cff
+    );
     border:none;
 }
 
@@ -801,71 +848,383 @@ section{
     cursor:not-allowed;
 }
 
-/* CONTACT */
+/* ================= PREMIUM CONTACT ================= */
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:25px;
+.contact-section{
+    position:relative;
+    overflow:hidden;
 }
 
-.contact-card{
-    padding:30px;
+.contact-section:before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:var(--purple);
+    filter:blur(150px);
+    opacity:.08;
+    left:-250px;
+    bottom:-200px;
+    pointer-events:none;
+}
+
+.contact-section:after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    background:var(--blue);
+    filter:blur(150px);
+    opacity:.07;
+    right:-250px;
+    top:100px;
+    pointer-events:none;
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:25px;
+    position:relative;
+    z-index:2;
+}
+
+.contact-info{
+    padding:35px;
+    border:1px solid var(--border);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.025)
+    );
+    border-radius:24px;
+    backdrop-filter:blur(18px);
+}
+
+.contact-mini-title{
+    color:var(--blue);
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.contact-heading h3{
+    font-size:32px;
+    line-height:1.2;
+    margin:12px 0;
+}
+
+.contact-heading h3 span{
+    background:linear-gradient(
+        90deg,
+        var(--purple),
+        var(--blue),
+        var(--pink)
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.contact-heading p{
+    color:var(--muted);
+    line-height:1.75;
+    font-size:14px;
+    margin-bottom:28px;
 }
 
 .contact-item{
     display:flex;
-    gap:15px;
     align-items:center;
-    margin-bottom:22px;
+    gap:16px;
+    padding:16px;
+    margin-bottom:12px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:15px;
+    background:rgba(255,255,255,.025);
+    transition:.3s ease;
+}
+
+a.contact-item{
+    color:inherit;
+}
+
+.contact-item:hover{
+    transform:translateX(5px);
+    border-color:rgba(0,229,255,.3);
+    background:rgba(255,255,255,.045);
 }
 
 .contact-icon{
-    width:45px;
-    height:45px;
+    width:48px;
+    height:48px;
+    flex-shrink:0;
     display:grid;
     place-items:center;
-    border-radius:12px;
-    background:rgba(124,92,255,.12);
+    border-radius:13px;
     font-size:20px;
+    background:rgba(124,92,255,.12);
+    border:1px solid rgba(124,92,255,.15);
 }
 
-.contact-item small{
+.whatsapp-icon{
+    background:rgba(37,211,102,.09);
+    border-color:rgba(37,211,102,.15);
+}
+
+.email-icon{
+    background:rgba(0,229,255,.08);
+    border-color:rgba(0,229,255,.15);
+}
+
+.phone-icon{
+    background:rgba(255,60,172,.08);
+    border-color:rgba(255,60,172,.15);
+}
+
+.contact-details{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    min-width:0;
+}
+
+.contact-details small{
     color:var(--muted);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-.contact-item p{
-    margin-top:4px;
+.contact-details strong{
+    color:#e9ecf7;
+    font-size:13px;
+    word-break:break-word;
 }
 
-form{
-    display:grid;
-    gap:15px;
+.contact-details span{
+    color:var(--blue);
+    font-size:10px;
 }
 
-input,
-textarea{
-    width:100%;
-    padding:15px;
-    border-radius:12px;
-    border:1px solid var(--border);
+.social-area{
+    margin-top:27px;
+    padding-top:22px;
+    border-top:1px solid var(--border);
+}
+
+.social-area p{
+    color:var(--muted);
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.social-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.social-btn{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:9px 13px;
+    border-radius:9px;
     background:rgba(255,255,255,.04);
-    color:white;
-    outline:none;
-    font-family:inherit;
+    border:1px solid var(--border);
+    font-size:11px;
+    transition:.3s;
 }
 
-input:focus,
-textarea:focus{
+.social-btn:hover{
+    transform:translateY(-3px);
     border-color:var(--blue);
 }
 
-textarea{
-    min-height:150px;
+.contact-form-card{
+    padding:35px;
+    border:1px solid var(--border);
+    border-radius:24px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    backdrop-filter:blur(18px);
+    box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+
+.form-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:28px;
+}
+
+.form-top span:first-child{
+    color:var(--blue);
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+.form-top h3{
+    font-size:28px;
+    margin-top:8px;
+}
+
+.form-status{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:7px 11px;
+    border-radius:20px;
+    background:rgba(0,255,157,.07);
+    border:1px solid rgba(0,255,157,.16);
+    color:var(--green);
+    font-size:10px;
+}
+
+.form-status span{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 10px var(--green);
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:12px;
+    color:#cbd0df;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:14px 15px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.09);
+    background:rgba(0,0,0,.18);
+    color:#fff;
+    outline:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+.input-group input{
+    height:48px;
+}
+
+.input-group textarea{
+    min-height:135px;
     resize:vertical;
 }
 
-/* FOOTER */
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color:#687087;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:rgba(0,229,255,.5);
+    background:rgba(0,0,0,.25);
+    box-shadow:0 0 0 3px rgba(0,229,255,.05);
+}
+
+.contact-send-btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    padding:15px 18px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:white;
+    font-weight:700;
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        #4e8cff
+    );
+    box-shadow:0 12px 30px rgba(124,92,255,.22);
+    transition:.3s;
+}
+
+.contact-send-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 40px rgba(124,92,255,.3);
+}
+
+.send-arrow{
+    font-size:20px;
+    transition:.3s;
+}
+
+.contact-send-btn:hover .send-arrow{
+    transform:translateX(5px);
+}
+
+.form-note{
+    text-align:center;
+    color:#6f778d;
+    font-size:10px;
+    margin-top:13px;
+}
+
+.contact-bottom{
+    margin-top:25px;
+    padding:25px 30px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        rgba(124,92,255,.08),
+        rgba(0,229,255,.05)
+    );
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    position:relative;
+    z-index:2;
+}
+
+.contact-bottom span{
+    color:var(--blue);
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.contact-bottom h3{
+    margin-top:7px;
+    font-size:20px;
+}
+
+.bottom-whatsapp{
+    padding:12px 18px;
+    border-radius:11px;
+    background:#25d366;
+    color:white;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.3s;
+}
+
+.bottom-whatsapp:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(37,211,102,.25);
+}
+
+/* ================= FOOTER ================= */
 
 footer{
     padding:30px 0;
@@ -875,7 +1234,15 @@ footer{
     font-size:13px;
 }
 
-/* WHATSAPP */
+.footer-name{
+    color:white;
+}
+
+.footer-heart{
+    color:var(--pink);
+}
+
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
     position:fixed;
@@ -898,7 +1265,7 @@ footer{
     transform:scale(1.08);
 }
 
-/* REVEAL */
+/* ================= REVEAL ================= */
 
 .reveal{
     opacity:0;
@@ -911,7 +1278,7 @@ footer{
     transform:none;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
@@ -938,7 +1305,7 @@ footer{
 
     .hero-grid,
     .about-grid,
-    .contact-grid{
+    .contact-wrapper{
         grid-template-columns:1fr;
     }
 
@@ -1019,33 +1386,103 @@ footer{
         flex-direction:column;
         text-align:center;
     }
+
+    .contact-info,
+    .contact-form-card{
+        padding:25px;
+    }
+
+    .contact-heading h3{
+        font-size:26px;
+    }
+
+    .form-top{
+        align-items:flex-start;
+        gap:15px;
+        flex-direction:column;
+    }
+
+    .form-top h3{
+        font-size:24px;
+    }
+
+    .contact-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .bottom-whatsapp{
+        width:100%;
+        text-align:center;
+    }
+
+    .contact-details strong{
+        font-size:12px;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
+
 <nav class="navbar">
-    <div class="logo">Awais<span>.</span></div>
+
+    <div class="logo">
+        Awais<span>.</span>
+    </div>
 
     <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
     </ul>
 
-    <div class="menu-btn" id="menuBtn">☰</div>
+    <div class="menu-btn" id="menuBtn">
+        ☰
+    </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
+
 <div class="container hero-grid">
 
     <div class="hero-text reveal">
@@ -1057,7 +1494,9 @@ footer{
 
         <h1>
             Muhammad Awais<br>
-            <span class="gradient-text">Khan Abbasi</span>
+            <span class="gradient-text">
+                Khan Abbasi
+            </span>
         </h1>
 
         <h3>
@@ -1067,32 +1506,55 @@ footer{
         </h3>
 
         <p>
-            I am a Software Engineering student and technology-focused
-            professional with practical experience in computer operations,
-            customer dealing, hotel services and modern web development.
+            I am a Software Engineering student and
+            technology-focused professional with practical
+            experience in computer operations, customer dealing,
+            hotel services and modern web development.
         </p>
 
         <div class="buttons">
-            <a href="#projects" class="btn btn-primary">🚀 View Projects</a>
-            <a href="cv.pdf" class="btn btn-secondary">📄 Download CV</a>
-            <a href="#contact" class="btn btn-secondary">💬 Contact Me</a>
+
+            <a
+                href="#projects"
+                class="btn btn-primary">
+                🚀 View Projects
+            </a>
+
+            <a
+                href="cv.pdf"
+                class="btn btn-secondary">
+                📄 Download CV
+            </a>
+
+            <a
+                href="#contact"
+                class="btn btn-secondary">
+                💬 Contact Me
+            </a>
+
         </div>
 
         <div class="stats">
 
             <div class="stat">
                 <h3>4+</h3>
-                <p>Years Combined Experience</p>
+                <p>
+                    Years Combined Experience
+                </p>
             </div>
 
             <div class="stat">
                 <h3>3+</h3>
-                <p>Years Computer Operations</p>
+                <p>
+                    Years Computer Operations
+                </p>
             </div>
 
             <div class="stat">
                 <h3>1+</h3>
-                <p>Year Hotel Experience</p>
+                <p>
+                    Year Hotel Experience
+                </p>
             </div>
 
         </div>
@@ -1103,7 +1565,11 @@ footer{
     <div class="hero-image reveal">
 
         <div class="profile-ring">
-            <img src="profile.jpg" alt="Muhammad Awais Khan Abbasi">
+
+            <img
+                src="profile.jpg"
+                alt="Muhammad Awais Khan Abbasi">
+
         </div>
 
         <div class="float-card card-one">
@@ -1117,30 +1583,48 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
+
 <div class="container">
 
     <div class="section-title reveal">
+
         <span>ABOUT ME</span>
-        <h2>More Than Just a Portfolio</h2>
+
+        <h2>
+            More Than Just a Portfolio
+        </h2>
+
         <p>
             A combination of technology, practical experience,
             communication and continuous learning.
         </p>
+
     </div>
+
 
     <div class="about-grid">
 
         <div class="profile-card reveal">
 
-            <img class="mini-avatar" src="profile.jpg">
+            <img
+                class="mini-avatar"
+                src="profile.jpg"
+                alt="Muhammad Awais">
 
-            <h3>Muhammad Awais</h3>
-            <div class="role">Software Engineering Student</div>
+            <h3>
+                Muhammad Awais
+            </h3>
+
+            <div class="role">
+                Software Engineering Student
+            </div>
 
             <p>
                 Passionate about technology, web development,
@@ -1212,142 +1696,218 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
+
 <section id="services">
+
 <div class="container">
 
     <div class="section-title reveal">
+
         <span>WHAT I DO</span>
-        <h2>My Services</h2>
+
+        <h2>
+            My Services
+        </h2>
+
         <p>
-            Practical services based on my technical and professional experience.
+            Practical services based on my technical
+            and professional experience.
         </p>
+
     </div>
 
 
     <div class="services-grid">
 
         <div class="service-card reveal">
-            <div class="service-icon">🌐</div>
-            <h3>Web Development</h3>
+
+            <div class="service-icon">
+                🌐
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
             <p>
-                Modern responsive websites using HTML, CSS and JavaScript
-                with clean and attractive interfaces.
+                Modern responsive websites using HTML,
+                CSS and JavaScript with clean and
+                attractive interfaces.
             </p>
+
         </div>
 
-        <div class="service-card reveal">
-            <div class="service-icon">💻</div>
-            <h3>Computer Operations</h3>
-            <p>
-                Data entry, MS Office, document handling, printing,
-                scanning and daily computer operations.
-            </p>
-        </div>
 
         <div class="service-card reveal">
-            <div class="service-icon">🤝</div>
-            <h3>Customer Service</h3>
+
+            <div class="service-icon">
+                💻
+            </div>
+
+            <h3>
+                Computer Operations
+            </h3>
+
             <p>
-                Customer dealing, guest support, communication and
-                professional service assistance.
+                Data entry, MS Office, document handling,
+                printing, scanning and daily computer operations.
             </p>
+
+        </div>
+
+
+        <div class="service-card reveal">
+
+            <div class="service-icon">
+                🤝
+            </div>
+
+            <h3>
+                Customer Service
+            </h3>
+
+            <p>
+                Customer dealing, guest support,
+                communication and professional service assistance.
+            </p>
+
         </div>
 
     </div>
 
 </div>
+
 </section>
 
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
+
 <section id="skills">
+
 <div class="container">
 
     <div class="section-title reveal">
+
         <span>MY EXPERTISE</span>
-        <h2>Skills & Abilities</h2>
+
+        <h2>
+            Skills & Abilities
+        </h2>
+
     </div>
 
 
     <div class="skills-grid">
 
         <div class="skill-box reveal">
+
             <div class="skill-head">
                 <span>HTML / Web Development</span>
                 <span>90%</span>
             </div>
+
             <div class="progress">
                 <span style="width:90%"></span>
             </div>
+
         </div>
 
+
         <div class="skill-box reveal">
+
             <div class="skill-head">
                 <span>MS Word</span>
                 <span>90%</span>
             </div>
+
             <div class="progress">
                 <span style="width:90%"></span>
             </div>
+
         </div>
 
+
         <div class="skill-box reveal">
+
             <div class="skill-head">
                 <span>MS Excel</span>
                 <span>85%</span>
             </div>
+
             <div class="progress">
                 <span style="width:85%"></span>
             </div>
+
         </div>
 
+
         <div class="skill-box reveal">
+
             <div class="skill-head">
                 <span>Data Entry</span>
                 <span>95%</span>
             </div>
+
             <div class="progress">
                 <span style="width:95%"></span>
             </div>
+
         </div>
 
+
         <div class="skill-box reveal">
+
             <div class="skill-head">
                 <span>Customer Dealing</span>
                 <span>90%</span>
             </div>
+
             <div class="progress">
                 <span style="width:90%"></span>
             </div>
+
         </div>
 
+
         <div class="skill-box reveal">
+
             <div class="skill-head">
                 <span>Communication</span>
                 <span>85%</span>
             </div>
+
             <div class="progress">
                 <span style="width:85%"></span>
             </div>
+
         </div>
 
     </div>
 
 </div>
+
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- ================= EXPERIENCE ================= -->
+
 <section id="experience">
+
 <div class="container">
 
     <div class="section-title reveal">
+
         <span>MY JOURNEY</span>
-        <h2>Work Experience</h2>
+
+        <h2>
+            Work Experience
+        </h2>
+
     </div>
 
 
@@ -1359,17 +1919,22 @@ footer{
 
             <div class="timeline-card">
 
-                <div class="time">1 YEAR EXPERIENCE</div>
+                <div class="time">
+                    1 YEAR EXPERIENCE
+                </div>
 
-                <h3>Hotel Staff</h3>
+                <h3>
+                    Hotel Staff
+                </h3>
 
                 <p>
                     Lasani Pizza Hotel — Sukkur, Sindh
                 </p>
 
                 <p style="margin-top:12px;">
-                    Guest dealing, hotel support, customer service
-                    and daily operational assistance.
+                    Guest dealing, hotel support,
+                    customer service and daily
+                    operational assistance.
                 </p>
 
             </div>
@@ -1383,17 +1948,22 @@ footer{
 
             <div class="timeline-card">
 
-                <div class="time">3 YEARS EXPERIENCE</div>
+                <div class="time">
+                    3 YEARS EXPERIENCE
+                </div>
 
-                <h3>Computer Operator</h3>
+                <h3>
+                    Computer Operator
+                </h3>
 
                 <p>
                     Cola Next — Sukkur, Sindh
                 </p>
 
                 <p style="margin-top:12px;">
-                    Computer operations, data entry, MS Office,
-                    documentation and daily office tasks.
+                    Computer operations, data entry,
+                    MS Office, documentation and
+                    daily office tasks.
                 </p>
 
             </div>
@@ -1403,53 +1973,78 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
-<!-- EDUCATION -->
+<!-- ================= EDUCATION ================= -->
+
 <section id="education">
+
 <div class="container">
 
     <div class="section-title reveal">
+
         <span>EDUCATION</span>
-        <h2>Academic Journey</h2>
+
+        <h2>
+            Academic Journey
+        </h2>
+
     </div>
 
 
     <div class="edu-card reveal">
 
-        <div class="edu-icon">🎓</div>
+        <div class="edu-icon">
+            🎓
+        </div>
 
         <div>
-            <h3>BS Software Engineering</h3>
+
+            <h3>
+                BS Software Engineering
+            </h3>
 
             <p>
-                NFC Institute of Engineering & Technology, Multan
+                NFC Institute of Engineering & Technology,
+                Multan
             </p>
 
             <p>
-                Currently studying Software Engineering with
-                focus on programming, software development and technology.
+                Currently studying Software Engineering
+                with focus on programming, software
+                development and technology.
             </p>
+
         </div>
 
     </div>
 
 </div>
+
 </section>
 
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
+
 <section id="projects">
+
 <div class="container">
 
     <div class="section-title reveal">
+
         <span>MY WORK</span>
-        <h2>Featured Projects</h2>
+
+        <h2>
+            Featured Projects
+        </h2>
+
         <p>
-            A showcase of my current and upcoming digital projects.
-            More projects will be added as they are completed.
+            A showcase of my current and upcoming
+            digital projects.
         </p>
+
     </div>
 
 
@@ -1457,6 +2052,7 @@ footer{
 
 
         <!-- PROJECT 01 -->
+
         <div class="project-card reveal">
 
             <div class="project-preview">
@@ -1464,10 +2060,13 @@ footer{
                 <div class="browser">
 
                     <div class="browser-bar">
+
                         <span class="browser-dot"></span>
                         <span class="browser-dot"></span>
                         <span class="browser-dot"></span>
+
                     </div>
+
 
                     <div class="browser-content">
 
@@ -1479,9 +2078,11 @@ footer{
                         <div class="mock-line small"></div>
 
                         <div class="mock-boxes">
+
                             <div class="mock-box"></div>
                             <div class="mock-box"></div>
                             <div class="mock-box"></div>
+
                         </div>
 
                     </div>
@@ -1494,26 +2095,38 @@ footer{
             <div class="project-content">
 
                 <div class="project-number">
-                    <span>PROJECT 01</span>
-                    <span class="project-status soon">COMING SOON</span>
+
+                    <span>
+                        PROJECT 01
+                    </span>
+
+                    <span class="project-status soon">
+                        COMING SOON
+                    </span>
+
                 </div>
 
-                <h3>Abbasi Collection</h3>
+                <h3>
+                    Abbasi Collection
+                </h3>
 
                 <div class="project-category">
                     E-Commerce
                 </div>
 
                 <p>
-                    A modern online shopping platform concept
-                    for clothing, perfumes, shoes and mobile products.
+                    A modern online shopping platform
+                    concept for clothing, perfumes,
+                    shoes and mobile products.
                 </p>
 
                 <div class="tags">
+
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
                     <span class="tag">JavaScript</span>
                     <span class="tag">E-Commerce</span>
+
                 </div>
 
                 <div class="project-actions">
@@ -1534,6 +2147,7 @@ footer{
 
 
         <!-- PROJECT 02 -->
+
         <div class="project-card reveal">
 
             <div class="project-preview">
@@ -1541,27 +2155,40 @@ footer{
                 <div class="browser">
 
                     <div class="browser-bar">
+
                         <span class="browser-dot"></span>
                         <span class="browser-dot"></span>
                         <span class="browser-dot"></span>
+
                     </div>
+
 
                     <div class="browser-content">
 
-                        <div class="mock-logo"
-                             style="background:linear-gradient(90deg,var(--blue),var(--pink));">
+                        <div
+                            class="mock-logo"
+                            style="
+                            background:linear-gradient(
+                            90deg,
+                            var(--blue),
+                            var(--pink)
+                            );
+                            ">
                         </div>
 
-                        <div class="mock-title"
-                             style="width:55%;">
+                        <div
+                            class="mock-title"
+                            style="width:55%;">
                         </div>
 
                         <div class="mock-line"></div>
                         <div class="mock-line small"></div>
 
                         <div class="mock-boxes">
+
                             <div class="mock-box"></div>
                             <div class="mock-box"></div>
+
                         </div>
 
                     </div>
@@ -1574,27 +2201,38 @@ footer{
             <div class="project-content">
 
                 <div class="project-number">
-                    <span>PROJECT 02</span>
-                    <span class="project-status soon">AI PROJECT</span>
+
+                    <span>
+                        PROJECT 02
+                    </span>
+
+                    <span class="project-status soon">
+                        AI PROJECT
+                    </span>
+
                 </div>
 
-                <h3>Muskan AI Assistant</h3>
+                <h3>
+                    Muskan AI Assistant
+                </h3>
 
                 <div class="project-category">
                     Artificial Intelligence
                 </div>
 
                 <p>
-                    A personal AI assistant project designed for
-                    voice interaction, smart commands and a modern
-                    desktop experience.
+                    A personal AI assistant project designed
+                    for voice interaction, smart commands
+                    and a modern desktop experience.
                 </p>
 
                 <div class="tags">
+
                     <span class="tag">Python</span>
                     <span class="tag">Flask</span>
                     <span class="tag">AI</span>
                     <span class="tag">Voice</span>
+
                 </div>
 
                 <div class="project-actions">
@@ -1615,6 +2253,7 @@ footer{
 
 
         <!-- PROJECT 03 -->
+
         <div class="project-card reveal">
 
             <div class="project-preview">
@@ -1622,28 +2261,41 @@ footer{
                 <div class="browser">
 
                     <div class="browser-bar">
+
                         <span class="browser-dot"></span>
                         <span class="browser-dot"></span>
                         <span class="browser-dot"></span>
+
                     </div>
+
 
                     <div class="browser-content">
 
-                        <div class="mock-logo"
-                             style="background:linear-gradient(90deg,var(--pink),var(--purple));">
+                        <div
+                            class="mock-logo"
+                            style="
+                            background:linear-gradient(
+                            90deg,
+                            var(--pink),
+                            var(--purple)
+                            );
+                            ">
                         </div>
 
-                        <div class="mock-title"
-                             style="width:80%;">
+                        <div
+                            class="mock-title"
+                            style="width:80%;">
                         </div>
 
                         <div class="mock-line"></div>
                         <div class="mock-line small"></div>
 
                         <div class="mock-boxes">
+
                             <div class="mock-box"></div>
                             <div class="mock-box"></div>
                             <div class="mock-box"></div>
+
                         </div>
 
                     </div>
@@ -1656,26 +2308,38 @@ footer{
             <div class="project-content">
 
                 <div class="project-number">
-                    <span>PROJECT 03</span>
-                    <span class="project-status">LIVE</span>
+
+                    <span>
+                        PROJECT 03
+                    </span>
+
+                    <span class="project-status">
+                        LIVE
+                    </span>
+
                 </div>
 
-                <h3>Personal Portfolio</h3>
+                <h3>
+                    Personal Portfolio
+                </h3>
 
                 <div class="project-category">
                     Web Development
                 </div>
 
                 <p>
-                    My personal portfolio website showcasing my
-                    skills, experience, services and software projects.
+                    My personal portfolio website showcasing
+                    my skills, experience, services and
+                    software projects.
                 </p>
 
                 <div class="tags">
+
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
                     <span class="tag">JavaScript</span>
                     <span class="tag">GitHub Pages</span>
+
                 </div>
 
                 <div class="project-actions">
@@ -1703,88 +2367,333 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
 <div class="container">
 
     <div class="section-title reveal">
-        <span>GET IN TOUCH</span>
-        <h2>Let's Work Together</h2>
+
+        <span>
+            GET IN TOUCH
+        </span>
+
+        <h2>
+            Let's Work Together
+        </h2>
+
         <p>
-            Have a project, job opportunity or question?
-            Feel free to contact me.
+            Have a project, job opportunity, or simply
+            want to say hello? Send me a message and
+            let's connect.
         </p>
+
     </div>
 
 
-    <div class="contact-grid">
+    <div class="contact-wrapper">
 
-        <div class="contact-card reveal">
 
-            <div class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div>
-                    <small>Email</small>
-                    <p>awaiskhanabbasiabbasi@gmail.com</p>
-                </div>
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info reveal">
+
+            <div class="contact-heading">
+
+                <span class="contact-mini-title">
+                    CONTACT ME
+                </span>
+
+                <h3>
+                    Let's start a
+                    <span>
+                        conversation.
+                    </span>
+                </h3>
+
+                <p>
+                    I'm always open to discussing new
+                    projects, opportunities, creative
+                    ideas, and professional collaborations.
+                </p>
+
             </div>
 
-            <div class="contact-item">
-                <div class="contact-icon">📱</div>
-                <div>
-                    <small>Phone</small>
-                    <p>03148160348</p>
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:awaiskhanabbasiabbasi@gmail.com"
+                class="contact-item">
+
+                <div class="contact-icon email-icon">
+                    ✉️
                 </div>
-            </div>
+
+                <div class="contact-details">
+
+                    <small>
+                        Email
+                    </small>
+
+                    <strong>
+                        awaiskhanabbasiabbasi@gmail.com
+                    </strong>
+
+                    <span>
+                        Send me an email →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/923148160348"
+                target="_blank"
+                class="contact-item">
+
+                <div class="contact-icon whatsapp-icon">
+                    💬
+                </div>
+
+                <div class="contact-details">
+
+                    <small>
+                        WhatsApp
+                    </small>
+
+                    <strong>
+                        +92 314 8160348
+                    </strong>
+
+                    <span>
+                        Chat with me →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- PHONE -->
+
+            <a
+                href="tel:+923148160348"
+                class="contact-item">
+
+                <div class="contact-icon phone-icon">
+                    📱
+                </div>
+
+                <div class="contact-details">
+
+                    <small>
+                        Phone
+                    </small>
+
+                    <strong>
+                        0314 8160348
+                    </strong>
+
+                    <span>
+                        Call me →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- LOCATION -->
 
             <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                    <small>Location</small>
-                    <p>Multan, Punjab, Pakistan</p>
+
+                <div class="contact-icon">
+                    📍
                 </div>
+
+                <div class="contact-details">
+
+                    <small>
+                        Location
+                    </small>
+
+                    <strong>
+                        Multan, Punjab, Pakistan
+                    </strong>
+
+                    <span>
+                        Available for opportunities
+                    </span>
+
+                </div>
+
             </div>
 
-            <div class="contact-item">
-                <div class="contact-icon">💻</div>
-                <div>
-                    <small>GitHub</small>
-                    <p>MuhammadAwaisKhanAbbasi</p>
+
+            <!-- SOCIAL -->
+
+            <div class="social-area">
+
+                <p>
+                    Connect with me
+                </p>
+
+                <div class="social-buttons">
+
+                    <a
+                        href="https://github.com/MuhammadAwaisKhanAbbasi"
+                        target="_blank"
+                        class="social-btn">
+
+                        <span>💻</span>
+                        GitHub
+
+                    </a>
+
+                    <a
+                        href="https://wa.me/923148160348"
+                        target="_blank"
+                        class="social-btn">
+
+                        <span>💬</span>
+                        WhatsApp
+
+                    </a>
+
+                    <a
+                        href="mailto:awaiskhanabbasiabbasi@gmail.com"
+                        class="social-btn">
+
+                        <span>✉️</span>
+                        Email
+
+                    </a>
+
                 </div>
+
             </div>
 
         </div>
 
 
-        <div class="contact-card reveal">
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form-card reveal">
+
+            <div class="form-top">
+
+                <div>
+
+                    <span>
+                        MESSAGE ME
+                    </span>
+
+                    <h3>
+                        Send a Message
+                    </h3>
+
+                </div>
+
+                <div class="form-status">
+
+                    <span></span>
+                    Online
+
+                </div>
+
+            </div>
+
 
             <form id="contactForm">
 
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    required>
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required>
+                <div class="input-group">
 
-                <textarea
-                    id="message"
-                    placeholder="Your Message"
-                    required></textarea>
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="What is this about?"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                </div>
+
 
                 <button
                     type="submit"
-                    class="btn btn-primary">
-                    🚀 Send Message
+                    class="contact-send-btn">
+
+                    <span>
+                        🚀 Send Message
+                    </span>
+
+                    <span class="send-arrow">
+                        →
+                    </span>
+
                 </button>
+
+
+                <p class="form-note">
+                    🔒 Your message will open directly in WhatsApp.
+                </p>
 
             </form>
 
@@ -1792,53 +2701,115 @@ footer{
 
     </div>
 
+
+    <!-- BOTTOM CTA -->
+
+    <div class="contact-bottom reveal">
+
+        <div>
+
+            <span>
+                AVAILABLE FOR OPPORTUNITIES
+            </span>
+
+            <h3>
+                Let's build something amazing together.
+            </h3>
+
+        </div>
+
+        <a
+            href="https://wa.me/923148160348"
+            target="_blank"
+            class="bottom-whatsapp">
+
+            💬 Let's Talk
+
+        </a>
+
+    </div>
+
 </div>
+
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
     <div class="container">
-        © 2026 Muhammad Awais Khan Abbasi · Built with ❤️ & Code
+
+        © 2026
+        <span class="footer-name">
+            Muhammad Awais Khan Abbasi
+        </span>
+
+        · Built with
+        <span class="footer-heart">
+            ❤️
+        </span>
+        & Code
+
     </div>
+
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- ================= FLOATING WHATSAPP ================= -->
+
 <a
     href="https://wa.me/923148160348"
     target="_blank"
     class="whatsapp">
+
     ☎
+
 </a>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 /* MOBILE MENU */
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+const menuBtn =
+    document.getElementById("menuBtn");
 
-menuBtn.addEventListener("click",()=>{
+const navLinks =
+    document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+
     navLinks.classList.toggle("show");
+
 });
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
-    link.addEventListener("click",()=>{
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
         navLinks.classList.remove("show");
+
     });
+
 });
 
 
 /* TYPING EFFECT */
 
 const phrases = [
+
     "Software Engineering Student",
     "Web Developer",
     "Computer Operator",
     "Creative Problem Solver",
     "Future Software Engineer"
+
 ];
 
 let phraseIndex = 0;
@@ -1847,31 +2818,65 @@ let deleting = false;
 
 function typeEffect(){
 
-    const element = document.getElementById("typing");
-    const current = phrases[phraseIndex];
+    const element =
+        document.getElementById("typing");
+
+    const current =
+        phrases[phraseIndex];
+
 
     if(!deleting){
-        element.textContent = current.substring(0,charIndex + 1);
+
+        element.textContent =
+            current.substring(
+                0,
+                charIndex + 1
+            );
+
         charIndex++;
 
+
         if(charIndex === current.length){
+
             deleting = true;
-            setTimeout(typeEffect,1300);
+
+            setTimeout(
+                typeEffect,
+                1300
+            );
+
             return;
         }
 
     }else{
 
-        element.textContent = current.substring(0,charIndex - 1);
+        element.textContent =
+            current.substring(
+                0,
+                charIndex - 1
+            );
+
         charIndex--;
 
+
         if(charIndex === 0){
+
             deleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
+
+            phraseIndex =
+                (phraseIndex + 1)
+                % phrases.length;
+
         }
+
     }
 
-    setTimeout(typeEffect,deleting ? 45 : 75);
+
+    setTimeout(
+        typeEffect,
+        deleting ? 45 : 75
+    );
+
 }
 
 typeEffect();
@@ -1879,44 +2884,108 @@ typeEffect();
 
 /* SCROLL REVEAL */
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver(
-    entries=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add("active");
-            }
-        });
-    },
-    {
-        threshold:.12
-    }
-);
+const revealObserver =
+    new IntersectionObserver(
 
-revealElements.forEach(el=>{
-    revealObserver.observe(el);
+        function(entries){
+
+            entries.forEach(function(entry){
+
+                if(entry.isIntersecting){
+
+                    entry.target
+                        .classList
+                        .add("active");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.12
+        }
+
+    );
+
+
+revealElements.forEach(function(element){
+
+    revealObserver.observe(element);
+
 });
 
 
-/* WHATSAPP CONTACT FORM */
+/* CONTACT FORM → WHATSAPP */
 
-document.getElementById("contactForm").addEventListener("submit",function(e){
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
 
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
 
-    const text =
+    const name =
+        document
+        .getElementById("name")
+        .value
+        .trim();
+
+
+    const email =
+        document
+        .getElementById("email")
+        .value
+        .trim();
+
+
+    const subject =
+        document
+        .getElementById("subject")
+        .value
+        .trim();
+
+
+    const message =
+        document
+        .getElementById("message")
+        .value
+        .trim();
+
+
+    const whatsappMessage =
         "Hello Muhammad Awais Khan Abbasi!%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Email: " + encodeURIComponent(email) + "%0A%0A" +
-        "Message: " + encodeURIComponent(message);
+
+        "*Name:* " +
+        encodeURIComponent(name) +
+
+        "%0A" +
+
+        "*Email:* " +
+        encodeURIComponent(email) +
+
+        "%0A" +
+
+        "*Subject:* " +
+        encodeURIComponent(subject) +
+
+        "%0A%0A" +
+
+        "*Message:*%0A" +
+        encodeURIComponent(message);
+
+
+    const whatsappURL =
+        "https://wa.me/923148160348?text=" +
+        whatsappMessage;
+
 
     window.open(
-        "https://wa.me/923148160348?text=" + text,
+        whatsappURL,
         "_blank"
     );
 
