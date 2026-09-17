@@ -1,685 +1,1878 @@
- <!-- ================================
-     PREMIUM PROJECTS SECTION
-================================ -->
+ <!DOCTYPE html>
+<html lang="en">
 
-<section id="projects">
+<head>
 
-    <div class="container">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="section-head reveal">
-
-            <span>MY WORK</span>
-
-            <h2>Featured Projects</h2>
-
-            <p>
-                A selection of projects I'm building while exploring
-                software engineering, artificial intelligence and web development.
-            </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <!-- PROJECT 01 -->
-
-            <div class="glass project premium-project reveal">
-
-                <div class="project-top">
-
-                    <div class="project-number">
-                        01
-                    </div>
-
-                    <div class="project-icon">
-                        🛍️
-                    </div>
-
-                    <div class="project-status">
-                        Coming Soon
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        E-COMMERCE
-                    </div>
-
-                    <h3>
-                        Abbasi Collection
-                    </h3>
-
-                    <p>
-                        A modern e-commerce platform concept for clothing,
-                        perfumes, shoes and mobile products with a clean
-                        premium shopping experience.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">E-Commerce</span>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="project-label">
-                            🚧 In Development
-                        </span>
-
-                        <span class="project-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PROJECT 02 -->
-
-            <div class="glass project premium-project reveal">
-
-                <div class="project-top">
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div class="project-icon">
-                        🤖
-                    </div>
-
-                    <div class="project-status ai-status">
-                        AI PROJECT
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        ARTIFICIAL INTELLIGENCE
-                    </div>
-
-                    <h3>
-                        Muskan AI Assistant
-                    </h3>
-
-                    <p>
-                        A personal desktop AI assistant designed for voice
-                        interaction, smart commands and computer automation.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">Python</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Voice</span>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <span class="project-label">
-                            ⚡ Active Project
-                        </span>
-
-                        <span class="project-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PROJECT 03 -->
-
-            <div class="glass project premium-project reveal">
-
-                <div class="project-top">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div class="project-icon">
-                        🌐
-                    </div>
-
-                    <div class="project-status live-status">
-                        LIVE
-                    </div>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <div class="project-category">
-                        WEB DEVELOPMENT
-                    </div>
-
-                    <h3>
-                        Personal Portfolio
-                    </h3>
-
-                    <p>
-                        A premium responsive portfolio website featuring
-                        glassmorphism UI, animated effects and a modern
-                        personal brand experience.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">GitHub Pages</span>
-
-                    </div>
-
-
-                    <div class="project-footer">
-
-                        <a
-                            href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
-                            target="_blank"
-                            class="project-link"
-                        >
-                            View Live Project
-                            <span>↗</span>
-                        </a>
-
-                        <span class="project-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT COUNTER -->
-
-        <div class="project-bottom reveal">
-
-            <div>
-
-                <span class="project-count">
-                    03
-                </span>
-
-                <span>
-                    Projects
-                </span>
-
-            </div>
-
-
-            <div class="project-line"></div>
-
-
-            <div>
-
-                <span class="project-count">
-                    ∞
-                </span>
-
-                <span>
-                    Ideas Loading
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     PREMIUM PROJECT CSS
-================================ -->
+<title>Muhammad Awais Khan Abbasi | Developer</title>
 
 <style>
 
-.premium-project {
-    position: relative;
-    overflow: hidden;
-    transition: all .45s ease;
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-.premium-project::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    top: -130px;
-    right: -100px;
-
-    border-radius: 50%;
-
-    background: rgba(124,92,255,.12);
-
-    filter: blur(60px);
-
-    transition: .5s;
-
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050816;
+    color:#ffffff;
+    line-height:1.6;
 }
 
-.premium-project:hover::before {
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-    transform: scale(1.6);
-
-    background: rgba(0,229,255,.15);
-
+img{
+    max-width:100%;
 }
 
 
-.premium-project:hover {
+/* =========================
+   NAVBAR
+========================= */
 
-    transform: translateY(-12px) scale(1.015);
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
 
-    border-color: rgba(0,229,255,.35);
+    background:rgba(5,8,22,0.88);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    z-index:9999;
+}
+
+.nav-container{
+    width:90%;
+    max-width:1150px;
+    height:70px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#00e5ff;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#cccccc;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00e5ff;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title small{
+    color:#00e5ff;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-top:8px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    padding-top:70px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at 80% 30%,rgba(0,229,255,0.10),transparent 35%),
+    radial-gradient(circle at 20% 70%,rgba(0,229,255,0.06),transparent 30%);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero-text small{
+    color:#00e5ff;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    line-height:1.05;
+    margin:15px 0;
+}
+
+.hero-text h1 span{
+    color:#00e5ff;
+}
+
+.hero-text h2{
+    color:#aaa;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#999;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#00e5ff;
+    color:#001018;
+}
+
+.btn-secondary{
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,229,255,0.15);
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-box{
+    display:flex;
+    justify-content:center;
+}
+
+.profile{
+    width:320px;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #00e5ff;
 
     box-shadow:
-        0 25px 80px rgba(0,0,0,.35),
-        0 0 40px rgba(124,92,255,.08);
+    0 0 30px rgba(0,229,255,0.25),
+    0 0 80px rgba(0,229,255,0.08);
 
+    animation:float 4s ease-in-out infinite;
 }
 
+@keyframes float{
 
-/* PROJECT TOP */
-
-.premium-project .project-top {
-
-    position: relative;
-
-    height: 210px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(124,92,255,.20),
-            transparent 65%
-        );
-
-}
-
-
-.project-number {
-
-    position: absolute;
-
-    top: 20px;
-    left: 22px;
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    color: rgba(255,255,255,.35);
-
-    letter-spacing: 2px;
-
-}
-
-
-.project-icon {
-
-    font-size: 65px;
-
-    filter:
-        drop-shadow(0 0 25px rgba(124,92,255,.45));
-
-    transition: .45s;
-
-}
-
-
-.premium-project:hover .project-icon {
-
-    transform:
-        scale(1.18)
-        rotate(-5deg);
-
-    filter:
-        drop-shadow(0 0 35px rgba(0,229,255,.55));
-
-}
-
-
-/* STATUS */
-
-.project-status {
-
-    position: absolute;
-
-    right: 18px;
-    top: 18px;
-
-    padding: 7px 10px;
-
-    border-radius: 8px;
-
-    font-size: 9px;
-
-    font-weight: 900;
-
-    letter-spacing: 1px;
-
-    background: rgba(255,255,255,.06);
-
-    border: 1px solid rgba(255,255,255,.1);
-
-    color: #c5cada;
-
-}
-
-
-.ai-status {
-
-    color: #c7bcff;
-
-    border-color:
-        rgba(124,92,255,.3);
-
-    background:
-        rgba(124,92,255,.08);
-
-}
-
-
-.live-status {
-
-    color: #77ffc0;
-
-    border-color:
-        rgba(0,255,157,.25);
-
-    background:
-        rgba(0,255,157,.07);
-
-}
-
-
-/* PROJECT CONTENT */
-
-.premium-project .project-content {
-
-    padding: 27px;
-
-}
-
-
-.project-category {
-
-    color: var(--secondary);
-
-    font-size: 9px;
-
-    font-weight: 900;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 9px;
-
-}
-
-
-.premium-project h3 {
-
-    font-size: 22px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.premium-project p {
-
-    min-height: 75px;
-
-}
-
-
-/* PROJECT FOOTER */
-
-.project-footer {
-
-    margin-top: 23px;
-
-    padding-top: 17px;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-}
-
-
-.project-label {
-
-    color: #929ab2;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-}
-
-
-.project-arrow {
-
-    width: 36px;
-    height: 36px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.05);
-
-    color: white;
-
-    transition: .35s;
-
-}
-
-
-.premium-project:hover .project-arrow {
-
-    background: var(--secondary);
-
-    color: #050816;
-
-    transform:
-        rotate(45deg);
-
-}
-
-
-.project-link {
-
-    color: var(--secondary);
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    display: flex;
-
-    gap: 7px;
-
-    align-items: center;
-
-    transition: .3s;
-
-}
-
-
-.project-link:hover {
-
-    color: white;
-
-    gap: 12px;
-
-}
-
-
-/* BOTTOM COUNTER */
-
-.project-bottom {
-
-    margin-top: 45px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 25px;
-
-    color: var(--muted);
-
-    font-size: 12px;
-
-}
-
-
-.project-bottom > div {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-}
-
-
-.project-count {
-
-    font-size: 22px;
-
-    font-weight: 900;
-
-    color: white;
-
-}
-
-
-.project-line {
-
-    width: 100px;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--secondary),
-            transparent
-        );
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:600px) {
-
-    .premium-project .project-top {
-
-        height: 180px;
-
+    0%,100%{
+        transform:translateY(0);
     }
 
-
-    .project-icon {
-
-        font-size: 55px;
-
+    50%{
+        transform:translateY(-12px);
     }
 
+}
 
-    .premium-project .project-content {
 
-        padding: 22px;
+/* =========================
+   ABOUT
+========================= */
 
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.card{
+    padding:30px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#00e5ff;
+}
+
+.card h3{
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#aaa;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    padding:30px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.service:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff;
+}
+
+.service-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.service h3{
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#aaa;
+    font-size:14px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.skill{
+    margin-bottom:22px;
+}
+
+.skill-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:7px;
+}
+
+.skill-info span:first-child{
+    font-weight:bold;
+}
+
+.skill-info span:last-child{
+    color:#00e5ff;
+}
+
+.progress{
+    height:9px;
+
+    background:#151a2e;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+
+    background:#00e5ff;
+
+    border-radius:20px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline{
+    max-width:850px;
+    margin:auto;
+}
+
+.timeline-item{
+    padding:25px 30px;
+
+    margin-bottom:22px;
+
+    background:rgba(255,255,255,0.04);
+
+    border-left:3px solid #00e5ff;
+
+    border-radius:0 12px 12px 0;
+
+    transition:0.3s;
+}
+
+.timeline-item:hover{
+    transform:translateX(5px);
+}
+
+.timeline-item h3{
+    color:#00e5ff;
+}
+
+.timeline-item h4{
+    margin:5px 0;
+}
+
+.timeline-item span{
+    color:#777;
+    font-size:14px;
+}
+
+.timeline-item p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.education-card{
+    padding:30px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.education-card:hover{
+    border-color:#00e5ff;
+    transform:translateY(-5px);
+}
+
+.education-card h3{
+    color:#00e5ff;
+    margin-bottom:12px;
+}
+
+.education-card p{
+    color:#aaa;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project{
+    padding:30px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff;
+}
+
+.project h3{
+    color:#00e5ff;
+    margin-bottom:12px;
+}
+
+.project p{
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.project-btn{
+    display:inline-block;
+
+    padding:9px 15px;
+
+    border:1px solid #00e5ff;
+
+    border-radius:7px;
+
+    color:#00e5ff;
+
+    font-size:13px;
+}
+
+.coming{
+    color:#ffc107;
+    font-size:12px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-item{
+    padding:20px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+.contact-item:hover{
+    border-color:#00e5ff;
+}
+
+.contact-item strong{
+    color:#00e5ff;
+}
+
+.contact-item p{
+    color:#aaa;
+    margin-top:5px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#0b1022;
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    color:white;
+
+    border-radius:8px;
+
+    outline:none;
+
+    font-family:inherit;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#00e5ff;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+
+/* =========================
+   SOCIAL
+========================= */
+
+.socials{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.social{
+    padding:10px 16px;
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    border-radius:7px;
+
+    color:#aaa;
+
+    transition:0.3s;
+}
+
+.social:hover{
+    color:#00e5ff;
+    border-color:#00e5ff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:30px 0;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    text-align:center;
+
+    color:#777;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:56px;
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    font-size:28px;
+
+    box-shadow:0 5px 25px rgba(0,0,0,0.4);
+
+    z-index:999;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
     }
 
-
-    .premium-project p {
-
-        min-height: auto;
-
+    .hero-text p{
+        margin-left:auto;
+        margin-right:auto;
     }
 
-
-    .project-bottom {
-
-        gap: 12px;
-
+    .buttons{
+        justify-content:center;
     }
 
+    .profile-box{
+        order:-1;
+    }
 
-    .project-line {
+    .profile{
+        width:240px;
+        height:240px;
+    }
 
-        width: 45px;
+    .services-grid,
+    .projects-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
+    .about-grid,
+    .contact-grid,
+    .education-grid,
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    nav{
+        height:65px;
+    }
+
+    .nav-container{
+        height:65px;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:65px;
+        left:0;
+
+        width:100%;
+
+        background:#080c1d;
+
+        flex-direction:column;
+
+        gap:0;
+
+        padding:15px 0;
+
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        padding:12px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-text h1{
+        font-size:43px;
+    }
+
+    .hero-text h2{
+        font-size:18px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .services-grid,
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .whatsapp{
+        right:18px;
+        bottom:18px;
     }
 
 }
 
 </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo">
+Muhammad <span>Awais</span>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#skills">Skills</a>
+</li>
+
+<li>
+<a href="#experience">Experience</a>
+</li>
+
+<li>
+<a href="#education">Education</a>
+</li>
+
+<li>
+<a href="#projects">Projects</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+
+<div class="hero-text">
+
+<small>
+HELLO, I'M
+</small>
+
+<h1>
+Muhammad <span>Awais</span><br>
+Khan Abbasi
+</h1>
+
+<h2>
+Web Developer • Software Developer • AI Assistant Developer
+</h2>
+
+<p>
+I build modern, responsive and user-friendly digital experiences.
+I also work with software development, computer operations and
+AI assistant projects.
+</p>
+
+<div class="buttons">
+
+<a
+href="#projects"
+class="btn btn-primary">
+🚀 View My Projects
+</a>
+
+<a
+href="cv.pdf"
+class="btn btn-secondary"
+download>
+📄 Download CV
+</a>
+
+<a
+href="#contact"
+class="btn btn-secondary">
+📩 Contact Me
+</a>
+
+</div>
+
+</div>
+
+
+<div class="profile-box">
+
+<img
+src="profile.jpg"
+class="profile"
+alt="Muhammad Awais Khan Abbasi">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+WHO I AM
+</small>
+
+<h2>
+About Me
+</h2>
+
+</div>
+
+
+<div class="about-grid">
+
+
+<div class="card">
+
+<h3>
+👨‍💻 Developer
+</h3>
+
+<p>
+I am a Software Engineering student interested in web development,
+software development, artificial intelligence and modern technology.
+I enjoy creating practical digital solutions and learning new technologies.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🎯 My Goal
+</h3>
+
+<p>
+My goal is to become a professional software developer and build
+high-quality websites, applications and intelligent AI-based systems
+that solve real-world problems.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+WHAT I DO
+</small>
+
+<h2>
+My Services
+</h2>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service">
+
+<div class="service-icon">
+🌐
+</div>
+
+<h3>
+Web Development
+</h3>
+
+<p>
+Modern, responsive and user-friendly websites for businesses,
+personal brands and projects.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+💻
+</div>
+
+<h3>
+Software Development
+</h3>
+
+<p>
+Development of useful software solutions and desktop-based applications.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🤖
+</div>
+
+<h3>
+AI Assistant
+</h3>
+
+<p>
+Development of AI assistant systems with voice interaction,
+automation and smart commands.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+UI / UX Design
+</h3>
+
+<p>
+Clean, modern and attractive interfaces designed for better user experience.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+📱
+</div>
+
+<h3>
+Responsive Design
+</h3>
+
+<p>
+Websites that work smoothly on mobile phones, tablets and computers.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🔧
+</div>
+
+<h3>
+Website Maintenance
+</h3>
+
+<p>
+Website updates, content changes, bug fixing and basic improvements.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+MY ABILITIES
+</small>
+
+<h2>
+Skills
+</h2>
+
+</div>
+
+
+<div class="skills-grid">
+
+
+<div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>HTML</span>
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:90%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>CSS</span>
+<span>85%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:85%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>JavaScript</span>
+<span>75%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:75%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Python</span>
+<span>80%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:80%">
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Flask</span>
+<span>75%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:75%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>MS Office</span>
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:90%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Computer Operations</span>
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:90%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-info">
+
+<span>Data Entry</span>
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width:90%">
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+MY JOURNEY
+</small>
+
+<h2>
+Work Experience
+</h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<h3>
+Hotel Staff / Waiter
+</h3>
+
+<h4>
+Lasani Pizza Hotel — Sukkur, Sindh
+</h4>
+
+<span>
+1 Year Experience
+</span>
+
+<p>
+Customer dealing, guest assistance, taking and serving orders,
+workplace organization and supporting daily hotel operations.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>
+Computer Operator
+</h3>
+
+<h4>
+Cola Next — Sukkur, Sindh
+</h4>
+
+<span>
+3 Years Experience
+</span>
+
+<p>
+MS Word, Excel, PowerPoint, data entry, typing, printing,
+scanning, record management and general office support.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+MY QUALIFICATION
+</small>
+
+<h2>
+Education
+</h2>
+
+</div>
+
+
+<div class="education-grid">
+
+
+<div class="education-card">
+
+<h3>
+🎓 BS Software Engineering
+</h3>
+
+<p>
+NFC Institute of Engineering & Technology, Multan
+</p>
+
+<br>
+
+<p>
+Currently studying Software Engineering with interest in
+software development, web technologies and artificial intelligence.
+</p>
+
+</div>
+
+
+<div class="education-card">
+
+<h3>
+💻 Technical Learning
+</h3>
+
+<p>
+HTML • CSS • JavaScript • Python • Flask
+</p>
+
+<br>
+
+<p>
+Continuously learning modern programming technologies and
+building practical software projects.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+MY WORK
+</small>
+
+<h2>
+Projects
+</h2>
+
+</div>
+
+
+<div class="projects-grid">
+
+
+<div class="project">
+
+<h3>
+🛍️ Abbasi Collection
+</h3>
+
+<p>
+A modern e-commerce website concept for clothing,
+perfumes, shoes and other products.
+</p>
+
+<span class="coming">
+COMING SOON
+</span>
+
+</div>
+
+
+<div class="project">
+
+<h3>
+🤖 Muskan AI Assistant
+</h3>
+
+<p>
+A personal AI assistant project with voice interaction,
+smart commands and automation features.
+</p>
+
+<span class="coming">
+COMING SOON
+</span>
+
+</div>
+
+
+<div class="project">
+
+<h3>
+💼 Portfolio Website
+</h3>
+
+<p>
+My personal developer portfolio built with modern HTML,
+CSS and responsive design.
+</p>
+
+<a
+href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
+target="_blank"
+class="project-btn">
+View Project →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+GET IN TOUCH
+</small>
+
+<h2>
+Contact Me
+</h2>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div>
+
+
+<div class="contact-info">
+
+
+<div class="contact-item">
+
+<strong>
+📞 Phone / WhatsApp
+</strong>
+
+<p>
+03148160348
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+✉️ Email
+</strong>
+
+<p>
+awaiskhanabbasiabbasi@gmail.com
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+📍 Location
+</strong>
+
+<p>
+Multan, Punjab, Pakistan
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+💼 Availability
+</strong>
+
+<p>
+Full-Time / Part-Time
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="socials">
+
+<a
+href="https://github.com/MuhammadAwaisKhanAbbasi"
+target="_blank"
+class="social">
+GitHub
+</a>
+
+<a
+href="mailto:awaiskhanabbasiabbasi@gmail.com"
+class="social">
+Email
+</a>
+
+<a
+href="https://wa.me/923148160348"
+target="_blank"
+class="social">
+WhatsApp
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="card">
+
+<form onsubmit="sendMessage(event)">
+
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required>
+
+
+<textarea
+id="message"
+placeholder="Your Message"
+required>
+</textarea>
+
+
+<button
+type="submit"
+class="btn btn-primary">
+
+💬 Send Message on WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 Muhammad Awais Khan Abbasi. All Rights Reserved.
+</p>
+
+<p>
+Built with ❤️ using HTML, CSS & JavaScript
+</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     WHATSAPP BUTTON
+========================= -->
+
+<a
+href="https://wa.me/923148160348"
+target="_blank"
+class="whatsapp"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById("name").value;
+
+
+    const email =
+    document.getElementById("email").value;
+
+
+    const message =
+    document.getElementById("message").value;
+
+
+    const text =
+    "Hello Muhammad Awais,%0A%0A" +
+
+    "Name: " +
+    encodeURIComponent(name) +
+
+    "%0AEmail: " +
+    encodeURIComponent(email) +
+
+    "%0A%0AMessage:%0A" +
+
+    encodeURIComponent(message);
+
+
+    const whatsapp =
+    "https://wa.me/923148160348?text=" +
+    text;
+
+
+    window.open(
+        whatsapp,
+        "_blank"
+    );
+
+}
+
+
+/* Close mobile menu after clicking */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("navLinks")
+            .classList
+            .remove("active");
+
+        }
+    );
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
