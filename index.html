@@ -1,14 +1,26 @@
  <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Muhammad Awais Khan Abbasi | Web Developer</title>
+    <meta name="description"
+        content="Muhammad Awais Khan Abbasi - Web Developer, Software Developer and AI Assistant Developer.">
 
-    <meta name="description" content="Muhammad Awais Khan Abbasi - Web Developer, Software Developer and AI Assistant Developer.">
+    <meta name="author" content="Muhammad Awais Khan Abbasi">
+
+    <title>Muhammad Awais Khan Abbasi | Developer</title>
+
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -16,480 +28,918 @@
             scroll-behavior: smooth;
         }
 
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0a0a0f;
+            background: #07070b;
             color: #ffffff;
             line-height: 1.6;
+            overflow-x: hidden;
         }
+
 
         a {
             text-decoration: none;
             color: inherit;
         }
 
-        /* ================= NAVBAR ================= */
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            background: #00eaff;
+            opacity: 0.06;
+            filter: blur(130px);
+            border-radius: 50%;
+            top: 100px;
+            left: -150px;
+            z-index: -1;
+        }
+
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: #7c3cff;
+            opacity: 0.05;
+            filter: blur(130px);
+            border-radius: 50%;
+            right: -150px;
+            bottom: 100px;
+            z-index: -1;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
 
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000;
-            background: rgba(10, 10, 15, 0.92);
-            backdrop-filter: blur(12px);
+            z-index: 999;
+
+            background: rgba(7, 7, 11, 0.85);
+            backdrop-filter: blur(15px);
+
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
+
 
         .nav-container {
             max-width: 1200px;
             margin: auto;
+
             padding: 18px 25px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+
         .logo {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
             letter-spacing: 2px;
+
             color: #00eaff;
         }
 
+
         .nav-links {
+            list-style: none;
+
             display: flex;
             gap: 28px;
-            list-style: none;
         }
 
+
         .nav-links a {
-            color: #ddd;
+            color: #cfcfd7;
             font-size: 15px;
+
             transition: 0.3s;
         }
+
 
         .nav-links a:hover {
             color: #00eaff;
         }
 
-        /* ================= HERO ================= */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 100vh;
-            padding: 120px 25px 70px;
+
+            padding: 130px 25px 80px;
+
             display: flex;
             align-items: center;
         }
 
+
         .hero-container {
-            max-width: 1200px;
             width: 100%;
+            max-width: 1200px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
+
+            gap: 70px;
+
             align-items: center;
         }
+
 
         .hero-small {
             color: #00eaff;
+
             font-size: 17px;
+
             font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
         }
+
 
         .hero h1 {
-            font-size: clamp(42px, 6vw, 78px);
+            font-size: clamp(45px, 6vw, 78px);
+
             line-height: 1.05;
-            margin-bottom: 22px;
+
+            margin-bottom: 25px;
         }
 
+
         .hero h1 span {
+            display: block;
+
             color: #00eaff;
         }
 
-        .hero p {
-            color: #b9b9c2;
-            font-size: 18px;
+
+        .hero-description {
             max-width: 650px;
-            margin-bottom: 30px;
+
+            color: #a9a9b5;
+
+            font-size: 18px;
+
+            margin-bottom: 32px;
         }
+
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+
             flex-wrap: wrap;
+
+            gap: 14px;
         }
+
 
         .btn {
             display: inline-block;
-            padding: 13px 25px;
+
+            padding: 13px 23px;
+
             border-radius: 8px;
+
             font-weight: bold;
+
             transition: 0.3s;
-            border: 1px solid #00eaff;
+
+            cursor: pointer;
         }
+
 
         .btn-primary {
             background: #00eaff;
+
             color: #061014;
+
+            border: 1px solid #00eaff;
         }
 
+
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(0,234,255,0.4);
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 0 25px rgba(0,234,255,0.4);
         }
+
 
         .btn-outline {
             color: #00eaff;
+
+            border: 1px solid #00eaff;
+
             background: transparent;
         }
 
+
         .btn-outline:hover {
             background: #00eaff;
+
             color: #061014;
+
+            transform: translateY(-4px);
         }
+
+
+        /* =========================
+           PROFILE
+        ========================= */
 
         .hero-image {
             display: flex;
+
             justify-content: center;
         }
 
+
+        .profile-wrapper {
+            position: relative;
+        }
+
+
         .profile-box {
             width: 330px;
-            height: 390px;
-            border: 2px solid #00eaff;
-            border-radius: 25px;
+
+            height: 400px;
+
             padding: 10px;
-            box-shadow: 0 0 40px rgba(0,234,255,0.15);
-            overflow: hidden;
+
+            border-radius: 25px;
+
+            border: 2px solid #00eaff;
+
+            background: #111118;
+
+            box-shadow:
+                0 0 50px rgba(0,234,255,0.12);
+
+            animation: floating 4s ease-in-out infinite;
         }
+
 
         .profile-box img {
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
             border-radius: 18px;
         }
 
-        /* ================= GENERAL ================= */
+
+        .profile-glow {
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: #00eaff;
+
+            opacity: 0.15;
+
+            filter: blur(80px);
+
+            z-index: -1;
+        }
+
+
+        @keyframes floating {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
-            padding: 90px 25px;
+            padding: 100px 25px;
         }
+
 
         .section-container {
             max-width: 1200px;
+
             margin: auto;
         }
 
+
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+
+            margin-bottom: 55px;
         }
 
+
         .section-title h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
+            font-size: 42px;
+
+            margin-bottom: 8px;
         }
+
 
         .section-title h2 span {
             color: #00eaff;
         }
 
+
         .section-title p {
-            color: #999;
+            color: #888894;
         }
 
-        /* ================= SERVICES ================= */
+
+        /* =========================
+           SERVICES
+        ========================= */
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 22px;
         }
 
+
         .service-card {
-            background: #111118;
-            padding: 30px;
-            border: 1px solid #24242e;
-            border-radius: 15px;
+            padding: 32px;
+
+            background:
+                rgba(17,17,24,0.8);
+
+            border:
+                1px solid #252530;
+
+            border-radius: 16px;
+
             transition: 0.3s;
         }
+
 
         .service-card:hover {
             transform: translateY(-8px);
+
             border-color: #00eaff;
-            box-shadow: 0 0 25px rgba(0,234,255,0.08);
+
+            box-shadow:
+                0 0 30px rgba(0,234,255,0.08);
         }
+
 
         .service-icon {
             font-size: 40px;
+
             margin-bottom: 15px;
         }
 
+
         .service-card h3 {
-            margin-bottom: 10px;
             font-size: 21px;
+
+            margin-bottom: 10px;
         }
 
+
         .service-card p {
-            color: #999;
+            color: #92929d;
+
             font-size: 15px;
         }
 
-        /* ================= PROJECTS ================= */
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
+
         .project-card {
-            background: #111118;
-            border: 1px solid #24242e;
-            border-radius: 16px;
             overflow: hidden;
+
+            background: #111118;
+
+            border:
+                1px solid #252530;
+
+            border-radius: 17px;
+
             transition: 0.3s;
         }
+
 
         .project-card:hover {
             transform: translateY(-8px);
+
             border-color: #00eaff;
+
+            box-shadow:
+                0 0 30px rgba(0,234,255,0.08);
         }
+
 
         .project-top {
-            height: 150px;
+            height: 160px;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
-            font-size: 55px;
-            background: linear-gradient(135deg, #101820, #151522);
+
+            font-size: 60px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #10151c,
+                    #171522
+                );
         }
 
+
         .project-content {
-            padding: 25px;
+            padding: 27px;
         }
+
 
         .project-content h3 {
             font-size: 22px;
+
             margin-bottom: 10px;
         }
 
+
         .project-content p {
-            color: #999;
+            color: #92929d;
+
             font-size: 14px;
-            margin-bottom: 15px;
+
+            margin-bottom: 17px;
         }
+
 
         .tags {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 7px;
+
             margin-bottom: 20px;
         }
 
+
         .tag {
-            background: #1d2730;
-            color: #00eaff;
             padding: 5px 9px;
+
+            background: #1a252c;
+
+            color: #00eaff;
+
             border-radius: 5px;
-            font-size: 12px;
+
+            font-size: 11px;
         }
+
 
         .project-button {
             display: inline-block;
+
             padding: 9px 17px;
-            border: 1px solid #00eaff;
-            border-radius: 6px;
+
             color: #00eaff;
-            font-size: 14px;
+
+            border:
+                1px solid #00eaff;
+
+            border-radius: 6px;
+
+            font-size: 13px;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
+
         .project-button:hover {
             background: #00eaff;
+
             color: #061014;
         }
 
-        /* ================= ABOUT ================= */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about-box {
-            background: #111118;
-            border: 1px solid #24242e;
-            border-radius: 18px;
-            padding: 40px;
             max-width: 950px;
+
             margin: auto;
+
+            padding: 45px;
+
             text-align: center;
+
+            background:
+                rgba(17,17,24,0.8);
+
+            border:
+                1px solid #252530;
+
+            border-radius: 18px;
         }
+
 
         .about-box p {
-            color: #b7b7bf;
+            color: #b5b5bf;
+
             font-size: 17px;
+
             margin-bottom: 18px;
         }
 
-        /* ================= CONTACT ================= */
+
+        .about-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact-wrapper {
-            max-width: 750px;
+            max-width: 800px;
+
             margin: auto;
         }
 
+
         .contact-form {
+            padding: 38px;
+
             background: #111118;
-            border: 1px solid #24242e;
+
+            border:
+                1px solid #252530;
+
             border-radius: 18px;
-            padding: 35px;
         }
 
+
         .input-group {
-            margin-bottom: 18px;
+            margin-bottom: 19px;
         }
+
 
         .input-group label {
             display: block;
+
+            color: #ddddE5;
+
             margin-bottom: 7px;
-            color: #ddd;
+
+            font-size: 14px;
         }
+
 
         .input-group input,
         .input-group textarea {
             width: 100%;
-            padding: 13px;
-            background: #09090e;
-            border: 1px solid #2a2a35;
-            color: white;
+
+            padding: 14px;
+
+            background: #08080d;
+
+            border:
+                1px solid #292934;
+
+            color: #ffffff;
+
             border-radius: 7px;
+
             outline: none;
+
             font-size: 15px;
+
+            transition: 0.3s;
         }
+
 
         .input-group input:focus,
         .input-group textarea:focus {
             border-color: #00eaff;
+
+            box-shadow:
+                0 0 10px rgba(0,234,255,0.08);
         }
 
+
         .input-group textarea {
-            height: 140px;
+            height: 150px;
+
             resize: vertical;
         }
 
+
         .submit-btn {
             width: 100%;
+
             padding: 14px;
+
             background: #00eaff;
+
             color: #061014;
+
             border: none;
+
             border-radius: 7px;
+
             font-size: 16px;
+
             font-weight: bold;
+
             cursor: pointer;
+
             transition: 0.3s;
         }
 
+
         .submit-btn:hover {
-            box-shadow: 0 0 25px rgba(0,234,255,0.35);
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 0 25px rgba(0,234,255,0.3);
         }
 
-        /* ================= SOCIAL ================= */
+
+        /* =========================
+           CONTACT INFO
+        ========================= */
+
+        .contact-info {
+            margin-top: 30px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .contact-card {
+            padding: 20px;
+
+            text-align: center;
+
+            background: #111118;
+
+            border:
+                1px solid #252530;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .contact-card:hover {
+            border-color: #00eaff;
+        }
+
+
+        .contact-card-icon {
+            font-size: 27px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .contact-card h4 {
+            margin-bottom: 5px;
+        }
+
+
+        .contact-card a {
+            color: #92929d;
+
+            font-size: 13px;
+
+            word-break: break-word;
+        }
+
+
+        .contact-card a:hover {
+            color: #00eaff;
+        }
+
+
+        /* =========================
+           SOCIAL
+        ========================= */
 
         .social-links {
             display: flex;
+
             justify-content: center;
-            gap: 15px;
+
             flex-wrap: wrap;
+
+            gap: 12px;
+
             margin-top: 30px;
         }
 
+
         .social-btn {
-            padding: 11px 20px;
-            border: 1px solid #30303a;
+            padding: 11px 19px;
+
+            border:
+                1px solid #30303b;
+
             border-radius: 8px;
+
             color: #ddd;
+
             transition: 0.3s;
         }
 
+
         .social-btn:hover {
-            border-color: #00eaff;
             color: #00eaff;
+
+            border-color: #00eaff;
+
             transform: translateY(-3px);
         }
 
-        /* ================= WHATSAPP ================= */
+
+        /* =========================
+           WHATSAPP
+        ========================= */
 
         .whatsapp {
             position: fixed;
+
             right: 22px;
+
             bottom: 22px;
-            width: 58px;
-            height: 58px;
+
+            width: 60px;
+
+            height: 60px;
+
             border-radius: 50%;
-            background: #25D366;
-            color: white;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
-            font-size: 28px;
+
+            background: #25D366;
+
+            color: white;
+
+            font-size: 29px;
+
             z-index: 999;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+
+            box-shadow:
+                0 5px 25px rgba(0,0,0,0.5);
+
             transition: 0.3s;
         }
 
+
         .whatsapp:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
         }
 
-        /* ================= FOOTER ================= */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            border-top: 1px solid #24242e;
-            padding: 30px 20px;
+            padding: 35px 20px;
+
             text-align: center;
-            color: #777;
+
+            border-top:
+                1px solid #24242e;
+
+            color: #777783;
         }
+
 
         footer span {
             color: #00eaff;
         }
 
-        /* ================= MOBILE ================= */
 
-        @media (max-width: 900px) {
+        footer p {
+            margin: 4px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 950px) {
 
             .hero-container {
                 grid-template-columns: 1fr;
+
                 text-align: center;
             }
 
-            .hero p {
+
+            .hero-description {
                 margin-left: auto;
+
                 margin-right: auto;
             }
+
 
             .hero-buttons {
                 justify-content: center;
             }
 
+
             .hero-image {
                 order: -1;
             }
 
-            .profile-box {
-                width: 280px;
-                height: 330px;
-            }
 
             .services-grid,
             .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
+
+
+            .contact-info {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
         }
+
 
         @media (max-width: 650px) {
 
@@ -497,137 +947,240 @@
                 padding: 15px;
             }
 
+
             .logo {
-                font-size: 19px;
+                font-size: 18px;
             }
+
 
             .nav-links {
-                gap: 12px;
+                gap: 10px;
             }
+
 
             .nav-links a {
-                font-size: 12px;
+                font-size: 11px;
             }
+
 
             section {
-                padding: 70px 18px;
+                padding: 75px 18px;
             }
 
+
             .hero {
-                padding-left: 18px;
-                padding-right: 18px;
+                padding:
+                    120px 18px 70px;
             }
+
 
             .hero h1 {
                 font-size: 43px;
             }
 
-            .hero p {
+
+            .hero-description {
                 font-size: 16px;
             }
+
+
+            .profile-box {
+                width: 270px;
+
+                height: 330px;
+            }
+
 
             .services-grid,
             .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-title h2 {
-                font-size: 32px;
+
+            .contact-info {
+                grid-template-columns: 1fr;
             }
+
 
             .about-box,
             .contact-form {
                 padding: 25px;
             }
 
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+
             .whatsapp {
                 right: 15px;
+
                 bottom: 15px;
+
+                width: 55px;
+
+                height: 55px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
     <nav>
+
         <div class="nav-container">
 
             <a href="#home" class="logo">
                 AWAIS.DEV
             </a>
 
+
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- ================= HERO ================= -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero" id="home">
 
         <div class="hero-container">
 
-            <div class="hero-content">
+
+            <div>
 
                 <div class="hero-small">
                     HELLO, I'M
                 </div>
 
+
                 <h1>
+
                     Muhammad Awais
-                    <span>Khan Abbasi</span>
+
+                    <span>
+                        Khan Abbasi
+                    </span>
+
                 </h1>
 
-                <p>
-                    Web Developer, Software Developer and AI Assistant Developer.
-                    I build modern, responsive and user-friendly digital experiences.
+
+                <p class="hero-description">
+
+                    Web Developer, Software Developer and
+                    AI Assistant Developer. I build modern,
+                    responsive and user-friendly digital
+                    experiences.
+
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <a href="#projects" class="btn btn-primary">
-                        View My Projects
+                    <a
+                        href="#projects"
+                        class="btn btn-primary">
+
+                        🚀 View My Projects
+
                     </a>
 
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
+
+                    <a
+                        href="cv.pdf"
+                        download
+                        class="btn btn-outline">
+
+                        📄 Download CV
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline">
+
+                        📩 Contact Me
+
                     </a>
 
                 </div>
 
             </div>
+
 
 
             <div class="hero-image">
 
-                <div class="profile-box">
+                <div class="profile-wrapper">
 
-                    <img src="profile.jpg" alt="Muhammad Awais Khan Abbasi">
+                    <div class="profile-glow"></div>
+
+                    <div class="profile-box">
+
+                        <img
+                            src="profile.jpg"
+                            alt="Muhammad Awais Khan Abbasi">
+
+                    </div>
 
                 </div>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- ================= SERVICES ================= -->
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
     <section id="services">
 
         <div class="section-container">
+
 
             <div class="section-title">
 
@@ -636,96 +1189,133 @@
                 </h2>
 
                 <p>
-                    What I can build for you
+                    Professional digital solutions
                 </p>
 
             </div>
 
 
+
             <div class="services-grid">
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">🌐</div>
+                    <div class="service-icon">
+                        🌐
+                    </div>
 
-                    <h3>Web Development</h3>
+                    <h3>
+                        Web Development
+                    </h3>
 
                     <p>
-                        Modern and responsive websites using HTML, CSS,
-                        JavaScript and modern web technologies.
+                        Modern, responsive and
+                        professional websites using
+                        HTML, CSS and JavaScript.
                     </p>
 
                 </div>
 
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">💻</div>
+                    <div class="service-icon">
+                        💻
+                    </div>
 
-                    <h3>Software Development</h3>
+                    <h3>
+                        Software Development
+                    </h3>
 
                     <p>
-                        Custom software solutions designed according to
-                        specific business and user requirements.
+                        Custom software solutions
+                        designed according to business
+                        and user requirements.
                     </p>
 
                 </div>
 
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">🤖</div>
+                    <div class="service-icon">
+                        🤖
+                    </div>
 
-                    <h3>AI Assistant</h3>
+                    <h3>
+                        AI Assistant
+                    </h3>
 
                     <p>
-                        Voice-controlled AI assistant systems with
-                        Python, Flask and automation.
+                        Intelligent assistant systems
+                        using Python, Flask, automation
+                        and voice interaction.
                     </p>
 
                 </div>
 
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon">
+                        🎨
+                    </div>
 
-                    <h3>UI/UX Design</h3>
+                    <h3>
+                        UI / UX Design
+                    </h3>
 
                     <p>
-                        Clean, modern and attractive interfaces focused
-                        on usability and user experience.
+                        Clean, modern and attractive
+                        interfaces focused on usability
+                        and user experience.
                     </p>
 
                 </div>
 
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">📱</div>
+                    <div class="service-icon">
+                        📱
+                    </div>
 
-                    <h3>Responsive Design</h3>
+                    <h3>
+                        Responsive Design
+                    </h3>
 
                     <p>
-                        Websites that work smoothly on mobile,
+                        Websites optimized for mobile,
                         tablet and desktop devices.
                     </p>
 
                 </div>
 
 
+
                 <div class="service-card">
 
-                    <div class="service-icon">🔧</div>
+                    <div class="service-icon">
+                        🔧
+                    </div>
 
-                    <h3>Website Maintenance</h3>
+                    <h3>
+                        Website Maintenance
+                    </h3>
 
                     <p>
-                        Website updates, improvements, bug fixing and
-                        ongoing technical support.
+                        Website updates, bug fixing,
+                        improvements and technical
+                        support.
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -734,11 +1324,15 @@
     </section>
 
 
-    <!-- ================= PROJECTS ================= -->
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
 
     <section id="projects">
 
         <div class="section-container">
+
 
             <div class="section-title">
 
@@ -747,16 +1341,17 @@
                 </h2>
 
                 <p>
-                    Some of my work and current projects
+                    Projects I have built and I'm working on
                 </p>
 
             </div>
 
 
+
             <div class="projects-grid">
 
 
-                <!-- PROJECT 1 -->
+                <!-- ABBASI COLLECTION -->
 
                 <div class="project-card">
 
@@ -764,27 +1359,49 @@
                         🛍️
                     </div>
 
+
                     <div class="project-content">
 
                         <h3>
                             Abbasi Collection
                         </h3>
 
+
                         <p>
-                            An e-commerce website concept for clothing,
-                            perfumes, shoes and mobile products.
+                            An e-commerce website concept
+                            for clothing, perfumes, shoes
+                            and mobile products.
                         </p>
 
+
                         <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">E-Commerce</span>
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                E-Commerce
+                            </span>
+
                         </div>
 
-                        <a href="#" class="project-button"
-                           onclick="comingSoon(event)">
+
+                        <a
+                            href="#"
+                            onclick="comingSoon(event)"
+                            class="project-button">
+
                             Coming Soon
+
                         </a>
 
                     </div>
@@ -792,7 +1409,8 @@
                 </div>
 
 
-                <!-- PROJECT 2 -->
+
+                <!-- MUSKAN -->
 
                 <div class="project-card">
 
@@ -800,27 +1418,49 @@
                         🤖
                     </div>
 
+
                     <div class="project-content">
 
                         <h3>
                             Muskan AI Assistant
                         </h3>
 
+
                         <p>
-                            A personal AI assistant project with voice
-                            interaction, Python and Flask backend.
+                            Personal AI assistant with
+                            voice interaction, Python,
+                            Flask and automation.
                         </p>
 
+
                         <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">AI</span>
-                            <span class="tag">Voice</span>
+
+                            <span class="tag">
+                                Python
+                            </span>
+
+                            <span class="tag">
+                                Flask
+                            </span>
+
+                            <span class="tag">
+                                AI
+                            </span>
+
+                            <span class="tag">
+                                Voice
+                            </span>
+
                         </div>
 
-                        <a href="#" class="project-button"
-                           onclick="comingSoon(event)">
+
+                        <a
+                            href="#"
+                            onclick="comingSoon(event)"
+                            class="project-button">
+
                             Coming Soon
+
                         </a>
 
                     </div>
@@ -828,7 +1468,8 @@
                 </div>
 
 
-                <!-- PROJECT 3 -->
+
+                <!-- PORTFOLIO -->
 
                 <div class="project-card">
 
@@ -836,33 +1477,55 @@
                         🚀
                     </div>
 
+
                     <div class="project-content">
 
                         <h3>
                             Portfolio Website
                         </h3>
 
+
                         <p>
-                            My personal developer portfolio built with
-                            HTML, CSS and JavaScript and deployed online.
+                            My personal developer portfolio
+                            built using HTML, CSS and JavaScript
+                            and deployed online.
                         </p>
 
+
                         <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">GitHub Pages</span>
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                GitHub Pages
+                            </span>
+
                         </div>
 
-                        <a href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
-                           target="_blank"
-                           class="project-button">
+
+                        <a
+                            href="https://muhammadawaiskhanabbasi.github.io/portfolio/"
+                            target="_blank"
+                            class="project-button">
+
                             View Project
+
                         </a>
 
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -871,11 +1534,15 @@
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section id="about">
 
         <div class="section-container">
+
 
             <div class="section-title">
 
@@ -886,22 +1553,29 @@
             </div>
 
 
+
             <div class="about-box">
 
                 <p>
-                    I am Muhammad Awais Khan Abbasi, a developer interested
-                    in web development, software development and artificial
-                    intelligence.
+                    I am Muhammad Awais Khan Abbasi,
+                    a developer interested in web
+                    development, software development
+                    and artificial intelligence.
                 </p>
 
-                <p>
-                    I enjoy creating practical digital solutions,
-                    modern websites and intelligent assistant systems.
-                </p>
 
                 <p>
-                    My goal is to continue learning new technologies and
-                    build useful products that solve real-world problems.
+                    I enjoy creating practical digital
+                    solutions, modern websites and
+                    intelligent assistant systems.
+                </p>
+
+
+                <p>
+                    My goal is to keep learning new
+                    technologies and build useful
+                    products that solve real-world
+                    problems.
                 </p>
 
             </div>
@@ -911,11 +1585,15 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section id="contact">
 
         <div class="section-container">
+
 
             <div class="section-title">
 
@@ -930,10 +1608,14 @@
             </div>
 
 
+
             <div class="contact-wrapper">
 
-                <form class="contact-form"
-                      onsubmit="sendMessage(event)">
+
+                <form
+                    class="contact-form"
+                    onsubmit="sendMessage(event)">
+
 
                     <div class="input-group">
 
@@ -945,10 +1627,10 @@
                             type="text"
                             id="name"
                             placeholder="Enter your name"
-                            required
-                        >
+                            required>
 
                     </div>
+
 
 
                     <div class="input-group">
@@ -961,61 +1643,149 @@
                             type="email"
                             id="email"
                             placeholder="Enter your email"
-                            required
-                        >
+                            required>
 
                     </div>
+
 
 
                     <div class="input-group">
 
                         <label for="message">
-                            Message
+                            Your Message
                         </label>
 
                         <textarea
                             id="message"
                             placeholder="Write your message..."
-                            required
-                        ></textarea>
+                            required></textarea>
 
                     </div>
+
 
 
                     <button
                         type="submit"
                         class="submit-btn">
-                        Send Message
+
+                        💬 Send Message on WhatsApp
+
                     </button>
+
 
                 </form>
 
 
-                <!-- SOCIAL LINKS -->
+
+                <!-- CONTACT CARDS -->
+
+                <div class="contact-info">
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">
+                            📧
+                        </div>
+
+                        <h4>
+                            Email
+                        </h4>
+
+                        <a
+                            href="mailto:awaiskhanabbasiabbasi@gmail.com">
+
+                            awaiskhanabbasiabbasi@gmail.com
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">
+                            💬
+                        </div>
+
+                        <h4>
+                            WhatsApp
+                        </h4>
+
+                        <a
+                            href="https://wa.me/923148160348"
+                            target="_blank">
+
+                            +92 314 8160348
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">
+                            🐙
+                        </div>
+
+                        <h4>
+                            GitHub
+                        </h4>
+
+                        <a
+                            href="https://github.com/MuhammadAwaisKhanAbbasi"
+                            target="_blank">
+
+                            View GitHub Profile
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SOCIAL BUTTONS -->
 
                 <div class="social-links">
+
 
                     <a
                         href="https://github.com/MuhammadAwaisKhanAbbasi"
                         target="_blank"
                         class="social-btn">
+
                         🐙 GitHub
+
                     </a>
+
 
                     <a
                         href="https://wa.me/923148160348"
                         target="_blank"
                         class="social-btn">
+
                         💬 WhatsApp
+
                     </a>
+
 
                     <a
-                        href="mailto:contact@example.com"
+                        href="mailto:awaiskhanabbasiabbasi@gmail.com"
                         class="social-btn">
+
                         ✉️ Email
+
                     </a>
 
+
                 </div>
+
 
             </div>
 
@@ -1024,28 +1794,41 @@
     </section>
 
 
-    <!-- ================= WHATSAPP FLOATING BUTTON ================= -->
+
+    <!-- =========================
+         FLOATING WHATSAPP
+    ========================= -->
 
     <a
         href="https://wa.me/923148160348"
         target="_blank"
         class="whatsapp"
-        aria-label="Contact me on WhatsApp">
+        aria-label="WhatsApp">
 
         💬
 
     </a>
 
 
-    <!-- ================= FOOTER ================= -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
         <p>
+
             © 2026
-            <span>Muhammad Awais Khan Abbasi</span>.
-            All Rights Reserved.
+
+            <span>
+                Muhammad Awais Khan Abbasi
+            </span>
+
+            — All Rights Reserved.
+
         </p>
+
 
         <p>
             Built with HTML, CSS & JavaScript.
@@ -1054,58 +1837,78 @@
     </footer>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
     <script>
+
+
+        /* =========================
+           CONTACT → WHATSAPP
+        ========================= */
 
         function sendMessage(event) {
 
             event.preventDefault();
 
+
             const name =
                 document.getElementById("name").value;
 
+
             const email =
                 document.getElementById("email").value;
+
 
             const message =
                 document.getElementById("message").value;
 
 
-            const whatsappMessage =
+            const text =
                 "Hello Muhammad Awais Khan Abbasi!" +
-                "%0A%0A" +
-                "Name: " + encodeURIComponent(name) +
-                "%0A" +
-                "Email: " + encodeURIComponent(email) +
-                "%0A%0A" +
-                "Message: " + encodeURIComponent(message);
+                "\n\n" +
+                "Name: " + name +
+                "\n" +
+                "Email: " + email +
+                "\n\n" +
+                "Message: " + message;
 
 
-            const whatsappURL =
+            const url =
                 "https://wa.me/923148160348?text=" +
-                whatsappMessage;
+                encodeURIComponent(text);
 
 
             window.open(
-                whatsappURL,
+                url,
                 "_blank"
             );
 
         }
 
 
+
+        /* =========================
+           COMING SOON
+        ========================= */
+
         function comingSoon(event) {
 
             event.preventDefault();
 
+
             alert(
-                "This project is currently under development. 🚀"
+                "🚀 This project is currently under development.\n\nComing Soon!"
             );
 
         }
 
+
     </script>
 
+
 </body>
+
 </html>
